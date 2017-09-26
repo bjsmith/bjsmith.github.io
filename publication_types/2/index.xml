@@ -11,28 +11,9 @@
     <atom:link href="/publication_types/2/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Virtually &#39;in the heat of the moment&#39;: Insula activation in safe sex negotiation among risky men.</title>
-      <link>/publication/riskysex/</link>
-      <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/riskysex/</guid>
-      <description>&lt;!--More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code.--&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Virtual Personalities: Using computational modeling to understand within-person variability</title>
-      <link>/publication/virtualpersonality/</link>
-      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/virtualpersonality/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Prefrontal cortical activity during the Stroop task: New insights into the why and the who of real-world risky sexual behavior</title>
       <link>/publication/emily-paper/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>/publication/emily-paper/</guid>
       <description>&lt;p&gt;&lt;em&gt;Background&lt;/em&gt; Research suggests that deficits in both executive functioning and trait impulsivity
@@ -57,6 +38,25 @@ sexual behavior.&lt;/p&gt;
 employ a different distribution of cognitive resources during tasks of executive functioning than men who practice safe sex, and that this may relate to differences in the prefrontal cortical/fronto-
 insular system responsible for impulse control.&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Virtually &#39;in the heat of the moment&#39;: Insula activation in safe sex negotiation among risky men.</title>
+      <link>/publication/riskysex/</link>
+      <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/riskysex/</guid>
+      <description>&lt;!--More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code.--&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Virtual Personalities: Using computational modeling to understand within-person variability</title>
+      <link>/publication/virtualpersonality/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/virtualpersonality/</guid>
+      <description></description>
     </item>
     
   </channel>

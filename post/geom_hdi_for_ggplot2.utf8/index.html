@@ -405,7 +405,7 @@ height.plot
 ##   https://github.com/ropensci/plotly/issues
 </code></pre>
 
-<p>preserve3db113964d18c1d0</p>
+<p>preserve219472b5508ad303</p>
 
 <p>So you might notice here that my <code>geom_hdi</code> doesn&rsquo;t display! That&rsquo;ll take a little extra work - just one more function!</p>
 
@@ -435,7 +435,7 @@ height.plot
 <pre><code class="language-r"> plotly::ggplotly(height.plot)
 </code></pre>
 
-<p>preserve8ba732ef4e164447</p>
+<p>preservee776e47e3b94b3b5</p>
 
 <p>Getting there! But hover over our HDIs: the printed x-coordinates are broken. Wouldn&rsquo;t it be nice to show the actual HDI coordinates on that hover? Yes it would! So we can edit the data <code>hovertext</code> property to display that. We use the params array to find what the x axis is called (it might not always be called &ldquo;x&rdquo;)</p>
 
@@ -465,7 +465,7 @@ height.plot
 <pre><code class="language-r"> plotly::ggplotly(height.plot)
 </code></pre>
 
-<p>preserve6ddcdc0b15a44241</p>
+<p>preserve1d13cd6156a2c2ed</p>
 
 <p>Now our overtext displays the higest density interval.</p>
 
@@ -481,9 +481,6 @@ height.plot
 <div class="container">
   <nav>
   <ul class="pager">
-    
-    <li class="previous"><a href="/post/geom_hdi_for_ggplot2/"><span
-      aria-hidden="true">&larr;</span> </a></li>
     
 
     
