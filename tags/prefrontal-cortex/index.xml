@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Prefrontal Cortex on Ben Smith</title>
-    <link>https://bjsmith.github.io/tags/prefrontal-cortex/</link>
+    <link>/tags/prefrontal-cortex/</link>
     <description>Recent content in Prefrontal Cortex on Ben Smith</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>A meta-analytical review of brain activity associated with intertemporal decisions: Evidence for a rostal-caudal tangibility axis</title>
-      <link>https://bjsmith.github.io/project/tangibility-hypothesis/</link>
+      <link>/project/tangibility-hypothesis/</link>
       <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://bjsmith.github.io/project/tangibility-hypothesis/</guid>
+      <guid>/project/tangibility-hypothesis/</guid>
       <description>&lt;p&gt;Although almost 200 temporal discounting experiments using functional magnetic resonance imaging are described in the literature, there has not been a meta-analysis synthesizing these results to identify regions differentially activated when subjects choose Smaller-Sooner versus Larger-Later alternatives.&lt;/p&gt;
 
 &lt;p&gt;Evidence suggests a ‘hierarchy of abstraction’ in the prefrontal cortex, from abstract planning and action in more anterior regions to concrete processing in posterior regions, interfacing to other regions of the brain. Because more distant future prospects are represented more abstractly (&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/25420220&#34; target=&#34;_blank&#34;&gt;Soderberg, Callahan, Kochersberger, Amit, &amp;amp; Ledgerwood, 2015&lt;/a&gt;), we hypothesized that LargerLater choices would be associated with more anterior PFC activation while SmallerSooner choices would be associated with more posterior activation.&lt;/p&gt;

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.27.1" />
+  <meta name="author" content="Ben Smith">
+  <meta name="description" content="PhD Candidate">
+
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  
+
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Ben Smith">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Ben Smith">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="/post/compare_models.utf8/">
+
+  
+
+  <title>Relative reliability of Models and variational Bayes | Ben Smith</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Ben Smith</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#teaching">
+            
+            <span>Teaching</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <h1 itemprop="name">Relative reliability of Models and variational Bayes</h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2017-09-25 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Sep 25, 2017
+    </time>
+  </span>
+
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/academic">academic</a
+    >, 
+    
+    <a href="/tags/bayesian-hierarchical-modeling">bayesian hierarchical modeling</a
+    >, 
+    
+    <a href="/tags/stan">stan</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2fcompare_models.utf8%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Relative%20reliability%20of%20Models%20and%20variational%20Bayes&amp;url=%2fpost%2fcompare_models.utf8%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fcompare_models.utf8%2f&amp;title=Relative%20reliability%20of%20Models%20and%20variational%20Bayes"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2fcompare_models.utf8%2f&amp;title=Relative%20reliability%20of%20Models%20and%20variational%20Bayes"
+         target="_blank">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Relative%20reliability%20of%20Models%20and%20variational%20Bayes&amp;body=%2fpost%2fcompare_models.utf8%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<p>I am working on using a Bayesian model to estimate parameters for our reward learning data. I&rsquo;m extending <a href="https://rpubs.com/CCSL/hBayesDM" target="_blank">Nate Haines&rsquo; Double Update Model for Reversal Learning</a> [@ahn2017revealing]. Nate modified the version available in his package hBayesDM to work with our dataset, which is a deterministic Reversal Learning task. I have since incrementally extended it to handle two different tasks (reward and punishment learning) and repeated runs.</p>
+
+<p>In the latest, repeated runs version, <code>double_update_rpo_repeated_runs</code>, I am getting values that are quite different to earlier versions. There two possible explanations I have for this:</p>
+
+<ul>
+<li>Either the former or current model isn&rsquo;t well designed. One or the other isn&rsquo;t reliable. The difference between the two is consistently inconsistent. We need to work out which is mis-specified.</li>
+<li>Variational Bayes gives us different results each time we run the same model. Variational Bayes is known to be less precise (but faster) than Monte Carlo Markov Chain estimation [@blei2017variational].</li>
+</ul>
+
+<p>These need to be tested out! So what we need to do is:</p>
+
+<ul>
+<li>run the models twice each</li>
+<li>save values</li>
+<li>compare Run1 mu, alpha, beta values for G2RiskyNoMeth and G3RiskyMeth</li>
+</ul>
+
+<p>##Method</p>
+
+<p>The hard part is running the model! This is done here. Let&rsquo;s compare:</p>
+
+<ul>
+<li><code>double_update_rpo_repeated_runs.stan</code>, the latest model designed for multiple runs</li>
+<li><code>double_update_rp_erroneous.stan</code>, processes reward and punishment data but only one run; there was an error that confused reward inverse temperature variance with punishment learning rate variance; I&rsquo;ve included that here so we can compare to the resutls we obtained before the error was discovered.</li>
+<li><code>double_update_rp_fixed.stan</code>, as above, but with the error fixed.</li>
+<li><code>double_update.stan</code>, Processes only reward <em>or</em> punishment data.</li>
+</ul>
+
+<p>We also want to run several times.</p>
+
+<pre><code class="language-r">models_to_run&lt;-c(&quot;double_update_rpo_repeated_runs&quot;,&quot;double_update_rp_fixed&quot;,&quot;double_update_rp_erroneous&quot;,&quot;double_update&quot;)
+times_to_run=3
+</code></pre>
+
+<p>The run-wrapper now takes a &ldquo;file suffix&rdquo; which means we can run it multiple times, each time with a different suffix, and the run will be saved and given an appropriate name.</p>
+
+<p>As we run these we need to be careful not to use up too much memory. We probably ought to extract <em>just the values we need</em>, which would exclude the individual subject values, then take each object out of memory.</p>
+
+<pre><code class="language-r">if(file.exists(&quot;model-summaries.RData&quot;)){
+  load(file=&quot;model-summaries.RData&quot;)
+}else{
+  model.summaries &lt;- vector(&quot;list&quot;, 2*length(models_to_run)*times_to_run)
+}
+
+if(any(sapply(model.summaries,is.null))){
+  for (g in 2:3){
+    for (m in models_to_run){
+      for (t in 1:times_to_run){
+        print (paste0(g,m,t,collapse=&quot;, &quot;))
+        #only run reward and punishment when we can
+        if(models_to_run %in% c(&quot;double_update_rpo_repeated_runs&quot;,&quot;double_update_rp_fixed&quot;,&quot;double_update_rp_erroneous&quot;)){
+          rp&lt;-c(1,2)
+        }else{
+          rp&lt;-c(2)
+        }
+        #only run multiple runs when we can
+        if(models_to_run %in% c(&quot;double_update_rpo_repeated_runs&quot;)){
+          runs=c(1,2)
+          generatePosteriorTrialPredictions=FALSE
+        }else{
+          runs=c(1)
+          generatePosteriorTrialPredictions=NA
+        }
+        #run the model
+        fit&lt;-lookupOrRunFit(
+          run=runs,groups_to_fit=g, model_to_use=m,includeSubjGroup = FALSE,
+          rp=rp,
+          model_rp_separately=TRUE,model_runs_separately = TRUE, include_pain=FALSE,
+          fileSuffix=paste0(&quot;20170923_test_iteration_&quot;,as.character(t),generatePosteriorTrialPredictions=generatePosteriorTrialPredictions)
+          )
+        
+        cat(&quot;...model loaded. Extracting...&quot;)
+        #save just the output we want.
+        first_empty_list_pos&lt;-min(which(sapply(model.summaries,is.null)))
+        print(paste(&quot;first_empty_list_pos is&quot;, as.character(first_empty_list_pos)))
+  
+  
+        if(m==&quot;double_update_rpo_repeated_runs&quot;){
+          model.summaries[[first_empty_list_pos]]&lt;-
+                      list(&quot;summaryObj&quot;=data_summarize_double_update_rpo_repeated_runs(rstan::extract(fit$fit)),
+                           &quot;g&quot;=g,&quot;m&quot;=m,&quot;t&quot;=t)
+        }else if(m==&quot;double_update_rp_erroneous&quot; || m==&quot;double_update_rp_fixed&quot;){
+          model.summaries[[first_empty_list_pos]]&lt;-
+                      list(&quot;summaryObj&quot;=data_summarize_double_update_rp(rstan::extract(fit$fit),
+                                                                      run = runs),
+                           &quot;g&quot;=g,&quot;m&quot;=m,&quot;t&quot;=t)
+        }else if(m==&quot;double_update&quot;){
+          model.summaries[[first_empty_list_pos]]&lt;-
+                      list(&quot;summaryObj&quot;=data_summarize_double_update(rstan::extract(fit$fit),
+                                                                     outcome.type = rp,
+                                                                     run = runs),
+                           &quot;g&quot;=g,&quot;m&quot;=m,&quot;t&quot;=t)
+        }else{
+          stop(&quot;f^&lt;%! I don't recognize that model.&quot;)
+        }
+        #remove the fit object from memory, because it is pretty large!
+        rm(fit)
+        print(&quot;...summary data extracted.&quot;)
+      }
+    }
+  }
+  save(model.summaries,file=&quot;model-summaries.RData&quot;)
+}
+</code></pre>
+
+<h2 id="results">Results</h2>
+
+<p>For each of the four models, we can compare to see how closely analyses runs matched one another. For each of the Run1 mu, sigma, alpha, beta values for G2RiskyNoMeth and G3RiskyMeth, we can see how much variance exists within and how much variance exists between models.</p>
+
+<pre><code class="language-r">#arrange all the data into a single data table.
+model.summary.all&lt;-NULL
+for(ms in model.summaries){
+  ms.summaryObj&lt;-ms$summaryObj
+  ms.summaryObj$Group&lt;-ms$g
+  ms.summaryObj$ModelName&lt;-ms$m
+  ms.summaryObj$AnalysisRepetition&lt;-ms$t
+  if(is.null(model.summary.all)){
+    model.summary.all&lt;-ms.summaryObj
+  }else{
+    model.summary.all&lt;-rbind(model.summary.all,ms.summaryObj)
+  }
+}
+</code></pre>
+
+<h3 id="alpha-mu-learning-rate">Alpha mu (learning rate)</h3>
+
+<pre><code>##                               Df Sum Sq Mean Sq  F value   Pr(&gt;F)    
+## factor(AnalysisRepetition)     2  0.094   0.047    28.32 5.32e-13 ***
+## factor(Group)                  1 26.309  26.309 15902.67  &lt; 2e-16 ***
+## ModelName                      3  2.508   0.836   505.33  &lt; 2e-16 ***
+## Residuals                  14963 24.754   0.002                      
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+</code></pre>
+
+<pre><code>## Single term deletions
+## 
+## Model:
+## Value ~ factor(AnalysisRepetition) + factor(Group) + ModelName
+##                            Df Sum of Sq    RSS    AIC   F value    Pr(&gt;F)
+## &lt;none&gt;                                  24.754 -95866                    
+## factor(AnalysisRepetition)  2    0.0937 24.848 -95813    28.316 5.321e-13
+## factor(Group)               1   26.3088 51.063 -85029 15902.675 &lt; 2.2e-16
+## ModelName                   3    2.5080 27.262 -94427   505.327 &lt; 2.2e-16
+##                               
+## &lt;none&gt;                        
+## factor(AnalysisRepetition) ***
+## factor(Group)              ***
+## ModelName                  ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+</code></pre>
+
+<p>It appears that repetition did make a difference, but most of the variance here really does seem to be in the model name (and even more between groups!)</p>
+
+<h3 id="beta-mu-inverse-temperature">Beta mu (inverse temperature)</h3>
+
+<pre><code>##                               Df Sum Sq Mean Sq F value Pr(&gt;F)    
+## factor(AnalysisRepetition)     2   2.41    1.21   195.7 &lt;2e-16 ***
+## factor(Group)                  1  57.86   57.86  9390.1 &lt;2e-16 ***
+## ModelName                      3   7.80    2.60   422.1 &lt;2e-16 ***
+## Residuals                  14963  92.19    0.01                   
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+</code></pre>
+
+<pre><code>## Single term deletions
+## 
+## Model:
+## Value ~ factor(AnalysisRepetition) + factor(Group) + ModelName
+##                            Df Sum of Sq     RSS    AIC F value    Pr(&gt;F)
+## &lt;none&gt;                                   92.194 -76182                  
+## factor(AnalysisRepetition)  2     2.411  94.605 -75799  195.68 &lt; 2.2e-16
+## factor(Group)               1    57.856 150.050 -68892 9390.07 &lt; 2.2e-16
+## ModelName                   3     7.803  99.997 -74972  422.14 &lt; 2.2e-16
+##                               
+## &lt;none&gt;                        
+## factor(AnalysisRepetition) ***
+## factor(Group)              ***
+## ModelName                  ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+</code></pre>
+
+<p>We can visualize how that looks.</p>
+
+<pre><code class="language-r">source(&quot;visualization/geom_hdi.R&quot;)
+
+m.reward.mu.run1&lt;-model.summary.all[Motivation==&quot;Reward&quot; &amp; Statistic==&quot;mu&quot; &amp; Run==1]
+#table(m.reward.mu.run1$ModelName)
+#for clarity's sake...
+m.reward.mu.run1$ModelName&lt;-sub(&quot;double_update&quot;,&quot;DU&quot;,m.reward.mu.run1$ModelName)
+
+  #plotly::ggplotly(p)
+  ggplot(m.reward.mu.run1[Parameter==&quot;alpha&quot;],aes(x=Value,fill=factor(Group),color=factor(Group)))+
+    geom_freqpoly(alpha=0.9,binwidth=0.001)+
+     geom_hdi(size=2, lineend = &quot;round&quot;,alpha=0.5,credible_mass=0.95)+
+    facet_grid(ModelName~AnalysisRepetition)+
+    labs(title=paste0(&quot;mu statistic in reward rounds, alpha&quot;))
+</code></pre>
+
+<p><img src="compare_models_files/figure-html/AOVVisualize-1.png" width="672" /></p>
+
+<pre><code class="language-r">  ggplot(m.reward.mu.run1[Parameter==&quot;beta&quot;],aes(x=Value,fill=factor(Group),color=factor(Group)))+
+    geom_freqpoly(alpha=0.9,binwidth=0.001)+
+     geom_hdi(size=2, lineend = &quot;round&quot;,alpha=0.9,credible_mass=0.95)+
+    facet_grid(ModelName~AnalysisRepetition)+
+    labs(title=paste0(&quot;mu statistic in reward rounds, beta&quot;))
+</code></pre>
+
+<p><img src="compare_models_files/figure-html/AOVVisualize-2.png" width="672" /></p>
+
+<p>There is one thing consistent across all samples for the reward round, no matter what model is used and across both repetitions. Meth users have lower or similar learning rates compared to Non-users. In no runs did we find that meth users had higher learning rates or inverse temperatures than non-users.</p>
+
+<p>However, there is considerable variation across both runs and models. Importantly, for the final model, which takes into account Run2 and also calculates both reward and punishment, posterior alpha (learning rate) samples overlapped such that it is visually not clear there was a significant difference between groups. If we examine the difference between groups for each analysis, we can see that the 95% HDI includes (and in fact, is pretty closely centered around) zero for two of the three analyses run for the final model.</p>
+
+<pre><code class="language-r">alpha_lastModel&lt;-tidyr::spread(m.reward.mu.run1[Parameter==&quot;alpha&quot; &amp; ModelName==&quot;DU_rpo_repeated_runs&quot;],
+              Group, Value)
+
+alpha_lastModel$GroupDifference&lt;-alpha_lastModel$`2`-alpha_lastModel$`3`
+
+plotly::ggplotly(ggplot(alpha_lastModel,
+         aes(x=GroupDifference,color=factor(AnalysisRepetition)))+
+    geom_freqpoly(alpha=0.9,binwidth=0.001)+
+     geom_hdi(size=2, lineend = &quot;round&quot;,alpha=0.5,credible_mass=0.95)+
+    labs(title=paste0(&quot;learning rate NoMeth-Meth group difference credible values, by Analysis\nWith 95% Highest Density Intervals&quot;)))
+</code></pre>
+
+<p>preserve14142d811f6bd336</p>
+
+<p>Differences between the groups varied considerably depending on whether we examine Analysis Run 1 or Run 2. For the second analysis, there were very small differences between groups; for the first analysis differences seemed to be larger. There was also quite a lot of variation between the parameters estimated by the different models, although it is not clear that it is necessary to go to the model used to explain the difference - this may simply be due to the random effects of each analysis.</p>
+
+<h1 id="discussion">Discussion</h1>
+
+<p>$\beta$ values are reasonably consistent between repeated trials. But for our final and most comprehensive analysis, variational bayes varies widely between concluding that there is a real between-group difference and that there is not.</p>
+
+<p>Thus, to really get at a decent answer we will want to take a look at using an MCMC estimator.</p>
+
+<h1 id="references">References</h1>
+
+    </div>
+  </div>
+
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="/post/geom_hdi_for_ggplot2/"><span
+      aria-hidden="true">&larr;</span> Making a confidence interval ggplot2 `geom`</a></li>
+    
+
+    
+    <li class="next"><a href="/post/compare_models.knit/">Relative reliability of Models and variational Bayes <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
+
+</div>
+
+<div class="article-container">
+  
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Ben Smith &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.2/imagesloaded.pkgd.min.js" integrity="sha512-iHzEu7GbSc705hE2skyH6/AlTpOfBmkx7nUqTLGzPYR+C1tRaItbRlJ7hT/D3YQ9SV0fqLKzp4XY9wKulTBGTw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js" integrity="sha512-Z5heTz36xTemt1TbtbfXtTq5lMfYnOkXM2/eWcTTiLU01+Sw4ku1i7vScDc8fWhrP2abz9GQzgKH5NGBLoYlAw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ScrollToPlugin.min.js" integrity="sha512-CDeU7pRtkPX6XJtF/gcFWlEwyaX7mcAp5sO3VIu/ylsdR74wEw4wmBpD5yYTrmMAiAboi9thyBUr1vXRPA7t0Q==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+    
+
+  </body>
+</html>
+
