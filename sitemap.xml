@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>https://bjsmith.github.io/project/joint-modeling/</loc>
+      <lastmod>2017-09-25T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://bjsmith.github.io/post/compare_models/</loc>
       <lastmod>2017-09-25T00:00:00+00:00</lastmod>
     </url>
@@ -113,6 +122,14 @@
     
     <url>
     
+      <loc>https://bjsmith.github.io/publication/emily-paper/</loc>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://bjsmith.github.io/publication_types/2/</loc>
       <lastmod>2017-07-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -182,8 +199,28 @@
     
     <url>
     
+      <loc>https://bjsmith.github.io/tags/morality/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://bjsmith.github.io/tags/neural-structure/</loc>
       <lastmod>2017-09-17T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://bjsmith.github.io/tags/personality/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -203,7 +240,7 @@
     <url>
     
       <loc>https://bjsmith.github.io/project/</loc>
-      <lastmod>2017-09-17T00:00:00+00:00</lastmod>
+      <lastmod>2017-09-25T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -214,6 +251,16 @@
     
       <loc>https://bjsmith.github.io/publication_types/</loc>
       <lastmod>2017-07-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://bjsmith.github.io/tags/reversal-learning/</loc>
+      <lastmod>2017-09-25T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
