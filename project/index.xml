@@ -7,34 +7,101 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Ben Smith</copyright>
-    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 Sep 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/project/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Deep Learning</title>
-      <link>https://bjsmith.github.io/project/deep-learning/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <title>A meta-analytical review of brain activity associated with intertemporal decisions: Evidence for a rostal-caudal tangibility axis</title>
+      <link>https://bjsmith.github.io/project/honor-values/</link>
+      <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://bjsmith.github.io/project/deep-learning/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+      <guid>https://bjsmith.github.io/project/honor-values/</guid>
+      <description>&lt;p&gt;Although almost 200 temporal discounting experiments using functional magnetic resonance imaging are described in the literature, there has not been a meta-analysis synthesizing these results to identify regions differentially activated when subjects choose Smaller-Sooner versus Larger-Later alternatives.&lt;/p&gt;
 
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+&lt;p&gt;Evidence suggests a ‘hierarchy of abstraction’ in the prefrontal cortex, from abstract planning and action in more anterior regions to concrete processing in posterior regions, interfacing to other regions of the brain. Because more distant future prospects are represented more abstractly (&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/25420220&#34; target=&#34;_blank&#34;&gt;Soderberg, Callahan, Kochersberger, Amit, &amp;amp; Ledgerwood, 2015&lt;/a&gt;), we hypothesized that LargerLater choices would be associated with more anterior PFC activation while SmallerSooner choices would be associated with more posterior activation.&lt;/p&gt;
 
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+&lt;p&gt;We examined the literature for temporal discounting tasks comparing decisions where subjects chose SmallerSooner vs. LargerLater rewards. Fifteen studies including 471 subjects were tested using SDM neural-meta-analysis software for significant activity throughout the brain across all fifteen studies. We observed LargerLater activity anterior of SmallerSooner activity, both in the left inferior frontal gyrus pars triangularis, which was consistent with our pre-registered hypothesis that LargerLater would be observed anterior of SmallerSooner activity.&lt;/p&gt;
 
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
-
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+&lt;p&gt;We call for further work investigating links between temporal discounting representation and the processing of abstract and concrete information in the prefrontal cortex, and propose further investigation into implications for a hierarchy of abstraction in a wide variety of decision-making processes based in the prefrontal cortex.&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>External Project</title>
+      <title>A meta-analytical review of brain activity associated with intertemporal decisions: Evidence for a rostal-caudal tangibility axis</title>
+      <link>https://bjsmith.github.io/project/tangibility-hypothesis/</link>
+      <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/project/tangibility-hypothesis/</guid>
+      <description>&lt;p&gt;Although almost 200 temporal discounting experiments using functional magnetic resonance imaging are described in the literature, there has not been a meta-analysis synthesizing these results to identify regions differentially activated when subjects choose Smaller-Sooner versus Larger-Later alternatives.&lt;/p&gt;
+
+&lt;p&gt;Evidence suggests a ‘hierarchy of abstraction’ in the prefrontal cortex, from abstract planning and action in more anterior regions to concrete processing in posterior regions, interfacing to other regions of the brain. Because more distant future prospects are represented more abstractly (&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/25420220&#34; target=&#34;_blank&#34;&gt;Soderberg, Callahan, Kochersberger, Amit, &amp;amp; Ledgerwood, 2015&lt;/a&gt;), we hypothesized that LargerLater choices would be associated with more anterior PFC activation while SmallerSooner choices would be associated with more posterior activation.&lt;/p&gt;
+
+&lt;p&gt;We examined the literature for temporal discounting tasks comparing decisions where subjects chose SmallerSooner vs. LargerLater rewards. Fifteen studies including 471 subjects were tested using SDM neural-meta-analysis software for significant activity throughout the brain across all fifteen studies. We observed LargerLater activity anterior of SmallerSooner activity, both in the left inferior frontal gyrus pars triangularis, which was consistent with our pre-registered hypothesis that LargerLater would be observed anterior of SmallerSooner activity.&lt;/p&gt;
+
+&lt;p&gt;We call for further work investigating links between temporal discounting representation and the processing of abstract and concrete information in the prefrontal cortex, and propose further investigation into implications for a hierarchy of abstraction in a wide variety of decision-making processes based in the prefrontal cortex.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Distinguishing honor, face, and dignity culture</title>
       <link>https://bjsmith.github.io/project/example-external-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
       <guid>https://bjsmith.github.io/project/example-external-project/</guid>
-      <description></description>
+      <description>&lt;ul&gt;
+&lt;li&gt;Honour culture is related to both the behavioral activation scale and Promotion Regulatory Focus
+
+&lt;ul&gt;
+&lt;li&gt;Face culture may be related to inhibition and prevention regulatory focus&lt;/li&gt;
+&lt;li&gt;Relational mobility appears to be related to both
+** cultural differences at least for sensitivity to loss of face, and
+** Activation and inhibitory motivational systems&lt;/li&gt;
+&lt;li&gt;Culture may mediate the relationship between relational mobility and prevention regulatory focus&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;ldquo;Saving Face&amp;rdquo; is a concept many English speakers are familiar with, but the concept of &amp;ldquo;face&amp;rdquo; representing one&amp;rsquo;s reputation in society is commonly considered to have arisen out of East Asian culture and Chinese culture in particular, where the concept is particularly important.
+While in English-speaking cultures, people often speak of &amp;ldquo;saving face&amp;rdquo;, or avoiding embarrassment, the phrase &amp;ldquo;losing face&amp;rdquo; is more prevalent in Chinese and other Asian cultures. In East Asian culture, &amp;ldquo;Face&amp;rdquo; is not simply equivalent to prestige or social reputation. Hu (1944) wrote it is prestige or social reputation gained from performing one&amp;rsquo;s social roles well and being recognized for it by others. The incentive to maintain face has been described as important for maintaining a collectivist mindset and harmonious relationships between individuals in a collectivist culture.&lt;/p&gt;
+
+&lt;p&gt;The honor subscale assesses the extent to which people endorse honor values. This scale includes the measure of strength of concern for family honor and integrity in social relations.&lt;/p&gt;
+
+&lt;p&gt;Honor is considered as &amp;ldquo;the value of a person in his own eyes, but also in the eyes of his society. It is his estimation of his own worth, his claim to pride, but it is also the acknowledgement of that claim…his right to pride&amp;rdquo; (Pitt-Rivers, 1966, p. 21). People who endorse higher levels of honor are more likely to demand respect, not tolerate being cheated or affronted, and pay back wrongs done to him or her (Leung &amp;amp; Cohen, 2011). Past studies have shown that the cultures of honor are predominant in Latin America, Southern US and Middle East.&lt;/p&gt;
+
+&lt;p&gt;Dignity culture emphasizes the individual rather than groups or families, and emphasizes the inherent and equal worth of individuals rather than placing individuals in social hierarchies.&lt;/p&gt;
+
+&lt;p&gt;This culture is hypothesized as being more prevalent in the Northeastern and Midwestern United States. However, there has been very little study of dignity culture. It is said that a fish doesn&amp;rsquo;t see the water it swims in because it&amp;rsquo;s just always been there. Similarly, &amp;ldquo;dignity culture&amp;rdquo; may be under-studied as a particular cultural mindset because it reflects cultural assumptions that researchers and social psychologists take for granted. Dignity culture is arguably the dominant cultural expression in the United States and English-speaking world, and many researchers come from a dignity culture themselves. As a result, it is not often recognized as a particular culture. Our aim is to observe how it might interact alongside other cultural mindsets.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Distinguishing honor, face, and dignity culture</title>
+      <link>https://bjsmith.github.io/project/honor-values-project/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/project/honor-values-project/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Honour culture is related to both the behavioral activation scale and Promotion Regulatory Focus
+
+&lt;ul&gt;
+&lt;li&gt;Face culture may be related to inhibition and prevention regulatory focus&lt;/li&gt;
+&lt;li&gt;Relational mobility appears to be related to both
+** cultural differences at least for sensitivity to loss of face, and
+** Activation and inhibitory motivational systems&lt;/li&gt;
+&lt;li&gt;Culture may mediate the relationship between relational mobility and prevention regulatory focus&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;ldquo;Saving Face&amp;rdquo; is a concept many English speakers are familiar with, but the concept of &amp;ldquo;face&amp;rdquo; representing one&amp;rsquo;s reputation in society is commonly considered to have arisen out of East Asian culture and Chinese culture in particular, where the concept is particularly important.
+While in English-speaking cultures, people often speak of &amp;ldquo;saving face&amp;rdquo;, or avoiding embarrassment, the phrase &amp;ldquo;losing face&amp;rdquo; is more prevalent in Chinese and other Asian cultures. In East Asian culture, &amp;ldquo;Face&amp;rdquo; is not simply equivalent to prestige or social reputation. Hu (1944) wrote it is prestige or social reputation gained from performing one&amp;rsquo;s social roles well and being recognized for it by others. The incentive to maintain face has been described as important for maintaining a collectivist mindset and harmonious relationships between individuals in a collectivist culture.&lt;/p&gt;
+
+&lt;p&gt;The honor subscale assesses the extent to which people endorse honor values. This scale includes the measure of strength of concern for family honor and integrity in social relations.&lt;/p&gt;
+
+&lt;p&gt;Honor is considered as &amp;ldquo;the value of a person in his own eyes, but also in the eyes of his society. It is his estimation of his own worth, his claim to pride, but it is also the acknowledgement of that claim…his right to pride&amp;rdquo; (Pitt-Rivers, 1966, p. 21). People who endorse higher levels of honor are more likely to demand respect, not tolerate being cheated or affronted, and pay back wrongs done to him or her (Leung &amp;amp; Cohen, 2011). Past studies have shown that the cultures of honor are predominant in Latin America, Southern US and Middle East.&lt;/p&gt;
+
+&lt;p&gt;Dignity culture emphasizes the individual rather than groups or families, and emphasizes the inherent and equal worth of individuals rather than placing individuals in social hierarchies.&lt;/p&gt;
+
+&lt;p&gt;This culture is hypothesized as being more prevalent in the Northeastern and Midwestern United States. However, there has been very little study of dignity culture. It is said that a fish doesn&amp;rsquo;t see the water it swims in because it&amp;rsquo;s just always been there. Similarly, &amp;ldquo;dignity culture&amp;rdquo; may be under-studied as a particular cultural mindset because it reflects cultural assumptions that researchers and social psychologists take for granted. Dignity culture is arguably the dominant cultural expression in the United States and English-speaking world, and many researchers come from a dignity culture themselves. As a result, it is not often recognized as a particular culture. Our aim is to observe how it might interact alongside other cultural mindsets.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

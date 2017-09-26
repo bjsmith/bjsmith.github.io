@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.27.1" />
+  <meta name="author" content="Ben Smith">
+  <meta name="description" content="PhD Candidate">
+
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  
+
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Ben Smith">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Ben Smith">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="/post/comparing_models/">
+
+  
+
+  <title>Comparing stan models: September 23 2017: Model comparison | Ben Smith</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Ben Smith</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#teaching">
+            
+            <span>Teaching</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <h1 itemprop="name">Comparing stan models: September 23 2017: Model comparison</h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2017-09-25 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Sep 25, 2017
+    </time>
+  </span>
+
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/academic">academic</a
+    >, 
+    
+    <a href="/tags/bayesian-hierarchical-modeling">bayesian hierarchical modeling</a
+    >, 
+    
+    <a href="/tags/stan">stan</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2fcomparing_models%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Comparing%20stan%20models%3a%20September%2023%202017%3a%20Model%20comparison&amp;url=%2fpost%2fcomparing_models%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fcomparing_models%2f&amp;title=Comparing%20stan%20models%3a%20September%2023%202017%3a%20Model%20comparison"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2fcomparing_models%2f&amp;title=Comparing%20stan%20models%3a%20September%2023%202017%3a%20Model%20comparison"
+         target="_blank">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Comparing%20stan%20models%3a%20September%2023%202017%3a%20Model%20comparison&amp;body=%2fpost%2fcomparing_models%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    <div class="article-style" itemprop="articleBody">
+      <p>I am working on building a Bayesian model. I’m extending Woo-Young Ahn and Nate Haines’ Double Update Model for Revesal Learning <span class="citation">(Ahn, Haines, and Zhang 2017)</span>. Nate modified the version available in his package hBayesDM to work with our dataset, which is a deterministic Reversal Learning task. I have since incrementally extended it to handle two different tasks (reward and punishment learning) and repeated runs.</p>
+<p>In the latest, repeated runs version, <code>double_update_rpo_repeated_runs</code>, I am getting values that are quite different to earlier versions. There two possible explanations I have for this:</p>
+<ul>
+<li>Either the former or current model isn’t well designed. One or the other isn’t reliable. The difference between the two is consistently inconsistent. We need to work out which is mis-specified.</li>
+<li>Variational Bayes gives us different results each time we run the same model. Variational Bayes is known to be less precise (but faster) than Monte Carlo Markov Chain estimation <span class="citation">(Blei, Kucukelbir, and McAuliffe 2017)</span>.</li>
+</ul>
+<p>These need to be tested out! So what we need to do is:</p>
+<ul>
+<li>run the models twice each</li>
+<li>save values</li>
+<li>compare Run1 mu, alpha, beta values for our two subject groups</li>
+</ul>
+<div id="method" class="section level2">
+<h2>Method</h2>
+<pre><code>
+knitr::opts_chunk$set(echo = TRUE)
+
+source(&quot;../nate_files/fitGroupsV3Onegroup.R&quot;)
+source(&quot;../data_summarize.R&quot;)</code></pre>
+<p>The hard part is running the model! This is done here. Let’s compare:</p>
+<ul>
+<li><code>double_update_rpo_repeated_runs.stan</code>, the latest model designed for multiple runs</li>
+<li><code>double_update_rp_erroneous.stan</code>, processes reward and punishment data but only one run; there was an error that confused reward inverse temperature variance with punishment learning rate variance; I’ve included that here so we can compare to the resutls we obtained before the error was discovered.</li>
+<li><code>double_update_rp.stan</code>, as above, but with the error fixed.</li>
+<li><code>double_update.stan</code>, Processes only reward <em>or</em> punishment data.</li>
+</ul>
+<p>We also want to run several times.</p>
+<pre><code>models_to_run&lt;-c(&quot;double_update_rpo_repeated_runs&quot;,&quot;double_update_rp_fixed&quot;,&quot;double_update_rp_erroneous&quot;,&quot;double_update&quot;)
+times_to_run=3</code></pre>
+<p>The run-wrapper now takes a “file suffix” which means we can run it multiple times, each time with a different suffix, and the run will be saved and given an appropriate name.</p>
+<p>As we run these we need to be careful not to use up too much memory. We probably ought to extract <em>just the values we need</em>, which would exclude the individual subject values, then take each object out of memory.</p>
+<pre><code>model.fits&lt;- vector(&quot;list&quot;, 2*length(models_to_run)*times_to_run)
+model.summaries &lt;- vector(&quot;list&quot;, 2*length(models_to_run)*times_to_run)
+for (g in 2:3){
+  for (m in models_to_run){
+    for (t in 1:times_to_run){
+      print (paste0(g,m,t,collapse=&quot;, &quot;))
+      #only run reward and punishment when we can
+      if(models_to_run %in% c(&quot;double_update_rpo_repeated_runs&quot;,&quot;double_update_rp_fixed&quot;,&quot;double_update_rp_erroneous&quot;)){
+        rp&lt;-c(1,2)
+      }else{
+        rp&lt;-c(2)
+      }
+      #only run multiple runs when we can
+      if(models_to_run %in% c(&quot;double_update_rpo_repeated_runs&quot;)){
+        runs=c(1,2)
+      }else{
+        runs=c(1)
+      }
+      #run the model
+      fit&lt;-lookupOrRunFit(
+        run=runs,groups_to_fit=g, model_to_use=m,includeSubjGroup = FALSE,
+        rp=rp,
+        model_rp_separately=TRUE,model_runs_separately = TRUE, include_pain=FALSE,
+        fileSuffix=paste0(&quot;20170923_test_iteration_&quot;,as.character(t),generatePosteriorTrialPredictions=TRUE)
+        )
+      
+      
+      #save just the output we want.
+      first_empty_list_pos&lt;-min(which(sapply(model.summaries,is.null)))
+      print(paste(&quot;first_empty_list_pos is&quot;, as.character(first_empty_list_pos)))
+
+
+      if(m==&quot;double_update_rpo_repeated_runs&quot;){
+        model.summaries[[first_empty_list_pos]]&lt;-
+                    list(&quot;summaryObj&quot;=data_summarize_double_update_rpo_repeated_runs(rstan::extract(fit$fit)),
+                         &quot;g&quot;=g,&quot;m&quot;=m,&quot;t&quot;=t)
+      }else if(m==&quot;double_update_rp_erroneous&quot; || m==&quot;double_update_rp_fixed&quot;){
+        model.summaries[[first_empty_list_pos]]&lt;-
+                    list(&quot;summaryObj&quot;=data_summarize_double_update_rp(rstan::extract(fit$fit),
+                                                                    run = runs),
+                         &quot;g&quot;=g,&quot;m&quot;=m,&quot;t&quot;=t)
+      }else if(m==&quot;double_update&quot;){
+        model.summaries[[first_empty_list_pos]]&lt;-
+                    list(&quot;summaryObj&quot;=data_summarize_double_update(rstan::extract(fit$fit),
+                                                                   outcome.type = rp,
+                                                                   run = runs),
+                         &quot;g&quot;=g,&quot;m&quot;=m,&quot;t&quot;=t)
+      }else{
+        stop(&quot;f^&lt;%! I don&#39;t recognize that model.&quot;)
+      }
+      #remove the fit object from memory, because it is pretty large!
+      rm(fit)
+      
+    }
+  }
+}
+save(model.summaries,file=&quot;model-summaries.RData&quot;)</code></pre>
+</div>
+<div id="results" class="section level2">
+<h2>Results</h2>
+<p>For each of the four models, we can compare to see how closely analyses runs matched one another. For each of the Run1 mu, sigma, alpha, beta values for G2RiskyNoMeth and G3RiskyMeth, we can see how much variance exists within and how much variance exists between models.</p>
+<pre><code>#arrange all the data into a single data table.
+model.summary.all&lt;-NULL
+for(ms in model.summaries){
+  print(ms$t)
+  ms.summaryObj&lt;-ms$summaryObj
+  ms.summaryObj$Group&lt;-ms$g
+  ms.summaryObj$ModelName&lt;-ms$m
+  ms.summaryObj$AnalysisRepetition&lt;-ms$t
+  if(is.null(model.summary.all)){
+    model.summary.all&lt;-ms.summaryObj
+  }else{
+    model.summary.all&lt;-rbind(model.summary.all,ms.summaryObj)
+  }
+}</code></pre>
+<pre><code>
+m.run1.punish.alpha.mu&lt;-model.summary.all[Motivation==&quot;Reward&quot; &amp; Statistic==&quot;mu&quot; &amp; Parameter==&quot;alpha&quot; &amp; Run==1]
+#nice. 
+#now, we should be able to ask how much of the variance is due to AnalysisRepetition, how much is due to Group, how much is due to ModelName
+#to keep things simple we will start with mu-alpha, run1, and treat iteration as random variable
+var.res.alpha&lt;-aov(Value~factor(AnalysisRepetition)+factor(Group)+ModelName,m.run1.punish.alpha.mu)
+print(summary(var.res.alpha))
+print(drop1(var.res.alpha,~.,test=&quot;F&quot;))</code></pre>
+<p>It appears that repetition did make a difference, but most of the variance here really does seem to be in the model name (and even more between groups!)</p>
+<pre><code>
+m.run1.punish.beta.mu&lt;-model.summary.all[Motivation==&quot;Reward&quot; &amp; Statistic==&quot;mu&quot; &amp; Parameter==&quot;beta&quot; &amp; Run==1]
+#nice. 
+#now, we should be able to ask how much of the variance is due to AnalysisRepetition, how much is due to Group, how much is due to ModelName
+#to keep things simple we will start with mu-alpha, run1, and treat iteration as random variable
+
+var.res.beta&lt;-aov(Value~factor(AnalysisRepetition)+factor(Group)+ModelName,m.run1.punish.beta.mu)
+print(summary(var.res.beta))
+print(drop1(var.res.beta,~.,test=&quot;F&quot;))
+</code></pre>
+<p>We can visualize how that looks.</p>
+<pre><code>source(&quot;../visualization/geom_hdi.R&quot;)
+
+m.reward.mu.run1&lt;-model.summary.all[Motivation==&quot;Reward&quot; &amp; Statistic==&quot;mu&quot; &amp; Run==1]
+table(m.reward.mu.run1$ModelName)
+#for clarity&#39;s sake...
+m.reward.mu.run1$ModelName&lt;-sub(&quot;double_update&quot;,&quot;DU&quot;,m.reward.mu.run1$ModelName)
+
+  #plotly::ggplotly(p)
+  ggplot(m.reward.mu.run1[Parameter==&quot;alpha&quot;],aes(x=Value,fill=factor(Group),color=factor(Group)))+
+    geom_freqpoly(alpha=0.9,binwidth=0.001)+
+     geom_hdi(size=2, lineend = &quot;round&quot;,alpha=0.5,credible_mass=0.95)+
+    facet_grid(ModelName~AnalysisRepetition)+
+    labs(title=paste0(&quot;mu statistic in reward rounds, alpha&quot;))
+   
+  ggplot(m.reward.mu.run1[Parameter==&quot;beta&quot;],aes(x=Value,fill=factor(Group),color=factor(Group)))+
+    geom_freqpoly(alpha=0.9,binwidth=0.001)+
+     geom_hdi(size=2, lineend = &quot;round&quot;,alpha=0.9,credible_mass=0.95)+
+    facet_grid(ModelName~AnalysisRepetition)+
+    labs(title=paste0(&quot;mu statistic in reward rounds, beta&quot;))
+
+  alpha.diff&lt;-t.test(m.reward.mu.run1[Parameter==&quot;alpha&quot; &amp; AnalysisRepetition==2 &amp; ModelName==&quot;DU_rpo_repeated_runs&quot; &amp; Group==3,Value] - 
+         m.reward.mu.run1[Parameter==&quot;alpha&quot; &amp; AnalysisRepetition==2 &amp; ModelName==&quot;DU_rpo_repeated_runs&quot; &amp; Group==2,Value])
+   </code></pre>
+<p>There is one thing consistent across all samples for the reward round, no matter what model is used and across both repetitions. Meth users have lower or similar learning rates and inverse temperatures compared to Non-users. In no runs did we find that meth users had higher learning rates or inverse temperatures than non-users.</p>
+<p>However, there is considerable variation across both runs and models. First, for the final model, which takes into account Run2 and also calculates both reward and punishment, posterior alpha (learning rate) samples overlapped such that it is visually not clear there was a significant difference between groups, although a t-test suggests a definite difference (p&lt;0.001).</p>
+<p>Differences between the groups varied considerably depending on whether we examine Analysis Run 1 or Run 2. For the second analysis, there were very small differences between groups; for the first analysis differences seemed to be larger. There was also quite a lot of variation between the parameters estimated by the different models, although it is not clear that it is necessary to go to the model used to explain the difference - this may simply be due to the random effects of each analysis.</p>
+</div>
+<div id="discussion" class="section level1">
+<h1>Discussion</h1>
+<p>Samples from the RewardPunishment-Multi-run model appear to be reasonably trustworthy. values are reasonably consistent between repeated trials. However, I’m wary that if some of the other models (even though we’re not using them) vary substantially between Analysis Trials, then there is reason to think that our current ‘gold standard’ model, RewardPunishment-Multi-run model, might differ too. Additionally, we might want more precision than we are currently getting.</p>
+<p>In summary, it seems like the current values using variational bayes are not completely useless. Within each model we are getting a similar pattern of results - and for each model we get roughly similar results - but we want to try to achieve more consistently than we are currently seeing.</p>
+</div>
+<div id="references" class="section level1">
+<h1>References</h1>
+<hr />
+<div id="refs" class="references">
+<div id="ref-ahn2017revealing">
+<p>Ahn, Woo-Young, Nathaniel Haines, and Lei Zhang. 2017. “Revealing Neurocomputational Mechanisms of Reinforcement Learning and Decision-Making with the HBayesDM Package.” <em>Computational Psychiatry</em>. MIT Press.</p>
+</div>
+<div id="ref-blei2017variational">
+<p>Blei, David M, Alp Kucukelbir, and Jon D McAuliffe. 2017. “Variational Inference: A Review for Statisticians.” <em>Journal of the American Statistical Association</em>, no. just-accepted. Taylor &amp; Francis.</p>
+</div>
+</div>
+</div>
+
+    </div>
+  </div>
+
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="/post/geom_hdi_for_ggplot2/"><span
+      aria-hidden="true">&larr;</span> Making a confidence interval ggplot2 `geom`</a></li>
+    
+
+    
+  </ul>
+</nav>
+
+</div>
+
+<div class="article-container">
+  
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Ben Smith &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.2/imagesloaded.pkgd.min.js" integrity="sha512-iHzEu7GbSc705hE2skyH6/AlTpOfBmkx7nUqTLGzPYR+C1tRaItbRlJ7hT/D3YQ9SV0fqLKzp4XY9wKulTBGTw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js" integrity="sha512-Z5heTz36xTemt1TbtbfXtTq5lMfYnOkXM2/eWcTTiLU01+Sw4ku1i7vScDc8fWhrP2abz9GQzgKH5NGBLoYlAw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ScrollToPlugin.min.js" integrity="sha512-CDeU7pRtkPX6XJtF/gcFWlEwyaX7mcAp5sO3VIu/ylsdR74wEw4wmBpD5yYTrmMAiAboi9thyBUr1vXRPA7t0Q==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+

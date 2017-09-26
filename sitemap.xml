@@ -5,6 +5,51 @@
     
     <url>
     
+      <loc>https://bjsmith.github.io/post/compare_models/</loc>
+      <lastmod>2017-09-25T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://bjsmith.github.io/post/geom_hdi_for_ggplot2/</loc>
+      <lastmod>2017-09-23T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://bjsmith.github.io/post/compare_models_test/</loc>
+      <lastmod>2017-09-23T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://bjsmith.github.io/project/honor-values/</loc>
+      <lastmod>2017-09-17T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://bjsmith.github.io/project/tangibility-hypothesis/</loc>
+      <lastmod>2017-09-17T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://bjsmith.github.io/publication/riskysex/</loc>
       <lastmod>2017-07-01T00:00:00+00:00</lastmod>
     </url>
@@ -59,7 +104,7 @@
     
     <url>
     
-      <loc>https://bjsmith.github.io/project/deep-learning/</loc>
+      <loc>https://bjsmith.github.io/project/example-external-project/</loc>
       <lastmod>2016-04-27T00:00:00+00:00</lastmod>
     </url>
     
@@ -68,7 +113,7 @@
     
     <url>
     
-      <loc>https://bjsmith.github.io/project/example-external-project/</loc>
+      <loc>https://bjsmith.github.io/project/honor-values-project/</loc>
       <lastmod>2016-04-27T00:00:00+00:00</lastmod>
     </url>
     
@@ -113,6 +158,16 @@
     
     <url>
     
+      <loc>https://bjsmith.github.io/tags/bayesian-hierarchical-modeling/</loc>
+      <lastmod>2017-09-25T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://bjsmith.github.io/</loc>
       <lastmod>2017-09-20T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -132,7 +187,7 @@
     
     <url>
     
-      <loc>https://bjsmith.github.io/tags/deep-learning/</loc>
+      <loc>https://bjsmith.github.io/tags/cross-cultural-research/</loc>
       <lastmod>2016-04-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -142,8 +197,38 @@
     
     <url>
     
-      <loc>https://bjsmith.github.io/tags/demo/</loc>
+      <loc>https://bjsmith.github.io/tags/culture/</loc>
       <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://bjsmith.github.io/tags/honor-culture/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://bjsmith.github.io/tags/neural-structure/</loc>
+      <lastmod>2017-09-17T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://bjsmith.github.io/tags/prefrontal-cortex/</loc>
+      <lastmod>2017-09-17T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -153,7 +238,7 @@
     <url>
     
       <loc>https://bjsmith.github.io/project/</loc>
-      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <lastmod>2017-09-17T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -164,6 +249,16 @@
     
       <loc>https://bjsmith.github.io/publication_types/</loc>
       <lastmod>2017-07-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://bjsmith.github.io/tags/stan/</loc>
+      <lastmod>2017-09-25T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

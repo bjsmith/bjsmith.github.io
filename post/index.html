@@ -92,6 +92,18 @@
         
 
         <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
           <a href="/#projects">
             
             <span>Projects</span>
@@ -143,6 +155,111 @@
   
 
   
+  
+  <div>
+    
+    <h2><a href="https://bjsmith.github.io/post/compare_models/">Relative reliability of Models and variational Bayes</a></h2>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2017-09-25 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Sep 25, 2017
+    </time>
+  </span>
+
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/academic">academic</a
+    >, 
+    
+    <a href="/tags/bayesian-hierarchical-modeling">bayesian hierarchical modeling</a
+    >, 
+    
+    <a href="/tags/stan">stan</a
+    >
+    
+  </span>
+  
+  
+
+  
+
+</div>
+
+    <div class="article-style"><p>
+      
+      I am working on using a Bayesian model to estimate parameters for our reward learning data. I’m extending Nate Haines’ Double Update Model for Reversal Learning (Ahn, Haines, and Zhang 2017). Nate modified the version available in his package hBayesDM to work with our dataset, which is a deterministic Reversal Learning task. I have since incrementally extended it to handle two different tasks (reward and punishment learning) and repeated runs.
+      
+    </p></div>
+  </div>
+  
+  <div>
+    
+    <h2><a href="https://bjsmith.github.io/post/geom_hdi_for_ggplot2/">Making a confidence interval ggplot2 `geom`</a></h2>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2017-09-23 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Sep 23, 2017
+    </time>
+  </span>
+
+  
+
+  
+
+  
+
+</div>
+
+    <div class="article-style"><p>
+      
+      For evaluating posteriors in Bayesian analysis it is pretty common to draw a “Highest Density Interval” to indicate the zone of highest (consecutive) density within a distribution, which may be plotted in a scatter plot or a histogram or density plot or similar.
+When working in ggplot, you’ll often add multiple layers to your graph in the form of “geoms”: for instance, a geom_point to show a scatterplot, which you could overlay with geom_abline to draw a trendline through the points.
+      
+    </p></div>
+  </div>
+  
+  <div>
+    
+    <h2><a href="https://bjsmith.github.io/post/compare_models_test/">TEST POST</a></h2>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2017-09-23 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Sep 23, 2017
+    </time>
+  </span>
+
+  
+
+  
+
+  
+
+</div>
+
+    <div class="article-style"><p>
+      
+      getwd() ## [1] &quot;/Users/benjaminsmith/GDrive/joint-modeling/reversal-learning/behavioral-analysis/reversallearning&quot; #source(&quot;nate_files/fitGroupsV3Onegroup.R&quot;) #source(&quot;/Users/benjaminsmith/GDrive/joint-modeling/reversal-learning/behavioral-analysis/reversallearning/data_summarize.R&quot;) library(ggplot2) set.seed(42) dat&lt;-data.frame(&quot;x&quot;=c(rnorm(1000,0,1))) ggplot(dat, aes(x=x)) + geom_histogram(binwidth=0.1) I am working on using a Bayesian model to estimate parameters for our reward learning data. I’m extending Nate Haines’ Double Update Model for Reversal Learning [@ahn2017revealing]. Nate modified the version available in his package hBayesDM to work with our dataset, which is a deterministic Reversal Learning task. I have since incrementally extended it to handle two different tasks (reward and punishment learning) and repeated runs.
+      
+    </p></div>
+  </div>
   
 
   
