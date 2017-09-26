@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2 on Ben Smith</title>
+    <link>https://bjsmith.github.io/publication_types/2/</link>
+    <description>Recent content in 2 on Ben Smith</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Ben Smith</copyright>
+    <lastBuildDate>Sat, 01 Jul 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/publication_types/2/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Prefrontal cortical activity during the Stroop task: New insights into the why and the who of real-world risky sexual behavior</title>
+      <link>https://bjsmith.github.io/publication/emily-paper/</link>
+      <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/publication/emily-paper/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Background&lt;/em&gt; Research suggests that deficits in both executive functioning and trait impulsivity
+may play a role in risky sexual behavior. At the neural level, differences in regulation of the
+prefrontal cortex have been linked to impulsivity, measured neurocognitively and through self-
+report. The relationship between neurocognitive measures of executive control and trait
+impulsivity in predicting risky sexual behavior has not been investigated.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Purpose&lt;/em&gt; To investigate the relationship between neural functioning during the Stroop task and risky sexual behavior, as well as the effect of individual differences in urgent (positive and negative) impulsivity on this relationship.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Methods&lt;/em&gt; 105 sexually active men who have sex with men (MSM) completed the Stroop task during functional magnetic resonance imaging scanning. They also completed impulsivity
+inventories and self-reported their risky sexual behavior (events of condomless anal sex in the last
+90 days).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Results&lt;/em&gt; Risky participants had greater activation than safe participants during the color
+congruent condition of the Stroop task in anterior cingulate cortex/dorsomedial prefrontal cortex,
+dorsolateral prefrontal cortex, left frontal pole, and right insula. Across these regions, this neural
+activation mediated the link between (positive and/or negative) urgent impulsivity and risky
+sexual behavior.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Conclusions&lt;/em&gt; Findings suggest that the brains of men who engage in risky sexual behavior may
+employ a different distribution of cognitive resources during tasks of executive functioning than men who practice safe sex, and that this may relate to differences in the prefrontal cortical/fronto-
+insular system responsible for impulse control.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Virtually &#39;in the heat of the moment&#39;: Insula activation in safe sex negotiation among risky men.</title>
+      <link>https://bjsmith.github.io/publication/riskysex/</link>
+      <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/publication/riskysex/</guid>
+      <description>&lt;!--More detail can easily be written here using *Markdown* and $\rm \LaTeX$ math code.--&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Virtual Personalities: Using computational modeling to understand within-person variability</title>
+      <link>https://bjsmith.github.io/publication/virtualpersonality/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/publication/virtualpersonality/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
