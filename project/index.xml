@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Ben Smith</title>
-    <link>https://bjsmith.github.io/project/</link>
+    <link>/project/</link>
     <description>Recent content in Projects on Ben Smith</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,18 +12,18 @@
     
     <item>
       <title>Demonstrating connections between structure and function through Bayesian modeling</title>
-      <link>https://bjsmith.github.io/project/joint-modeling/</link>
+      <link>/project/joint-modeling/</link>
       <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://bjsmith.github.io/project/joint-modeling/</guid>
-      <description>&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://bjsmith.github.io/rmarkdown-libs/plotlyjs/plotly-htmlwidgets.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/plotlyjs/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/plotly-binding/plotly.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://bjsmith.github.io/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/typedarray/typedarray.min.js&#34;&gt;&lt;/script&gt;
+      <guid>/project/joint-modeling/</guid>
+      <description>&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/plotlyjs/plotly-htmlwidgets.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/plotlyjs/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/plotly-binding/plotly.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/typedarray/typedarray.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;I use Bayesian Joint Modeling &lt;span class=&#34;citation&#34;&gt;(Turner et al. 2013, &lt;span class=&#34;citation&#34;&gt;Turner et al. (2016)&lt;/span&gt;)&lt;/span&gt; to describe neural correlates of reward responsiveness, inhibition, and impulsivity and the interactions between them in a sample of 170 men who have sex with men (MSM). Bayesian Joint Modeling is a statistical framework developed by BM Turner and colleagues for combining models of multiple information sources to better estimate the suitability of models for each source.&lt;/p&gt;
@@ -33,7 +33,7 @@
 &lt;div id=&#34;work-so-far&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Work so far&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://bjsmith.github.io/post/compare_models/&#34;&gt;Testing stan-based models in R&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/post/compare_models/&#34;&gt;Testing stan-based models in R&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Recent work with &lt;a href=&#34;http://haines-lab.com/&#34;&gt;Nate Haines&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Behavioral analysis&lt;/li&gt;
 &lt;/ul&gt;
@@ -62,10 +62,10 @@
     
     <item>
       <title>A meta-analytical review of brain activity associated with intertemporal decisions: Evidence for a rostal-caudal tangibility axis</title>
-      <link>https://bjsmith.github.io/project/tangibility-hypothesis/</link>
+      <link>/project/tangibility-hypothesis/</link>
       <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://bjsmith.github.io/project/tangibility-hypothesis/</guid>
+      <guid>/project/tangibility-hypothesis/</guid>
       <description>&lt;p&gt;Although almost 200 temporal discounting experiments using functional magnetic resonance imaging are described in the literature, there has not been a meta-analysis synthesizing these results to identify regions differentially activated when subjects choose Smaller-Sooner versus Larger-Later alternatives.&lt;/p&gt;
 
 &lt;p&gt;Evidence suggests a ‘hierarchy of abstraction’ in the prefrontal cortex, from abstract planning and action in more anterior regions to concrete processing in posterior regions, interfacing to other regions of the brain. Because more distant future prospects are represented more abstractly (&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/25420220&#34; target=&#34;_blank&#34;&gt;Soderberg, Callahan, Kochersberger, Amit, &amp;amp; Ledgerwood, 2015&lt;/a&gt;), we hypothesized that LargerLater choices would be associated with more anterior PFC activation while SmallerSooner choices would be associated with more posterior activation.&lt;/p&gt;
@@ -78,10 +78,10 @@
     
     <item>
       <title>Distinguishing honor, face, and dignity culture</title>
-      <link>https://bjsmith.github.io/project/honor-values-project/</link>
+      <link>/project/honor-values-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://bjsmith.github.io/project/honor-values-project/</guid>
+      <guid>/project/honor-values-project/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Honour culture is related to both the behavioral activation scale and Promotion Regulatory Focus
 

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Ben Smith</title>
-    <link>https://bjsmith.github.io/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Ben Smith</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,101 +12,101 @@
     
     <item>
       <title>Content tagged as &#39;Academic&#39;</title>
-      <link>https://bjsmith.github.io/tags/academic/</link>
+      <link>/tags/academic/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://bjsmith.github.io/tags/academic/</guid>
+      <guid>/tags/academic/</guid>
       <description>&lt;p&gt;Here is a list of all the content that has been tagged as &lt;em&gt;academic&lt;/em&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Bayesian Hierarchical Modeling</title>
-      <link>https://bjsmith.github.io/tags/bayesian-hierarchical-modeling/</link>
+      <link>/tags/bayesian-hierarchical-modeling/</link>
       <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://bjsmith.github.io/tags/bayesian-hierarchical-modeling/</guid>
+      <guid>/tags/bayesian-hierarchical-modeling/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cross Cultural Research</title>
-      <link>https://bjsmith.github.io/tags/cross-cultural-research/</link>
+      <link>/tags/cross-cultural-research/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://bjsmith.github.io/tags/cross-cultural-research/</guid>
+      <guid>/tags/cross-cultural-research/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Culture</title>
-      <link>https://bjsmith.github.io/tags/culture/</link>
+      <link>/tags/culture/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://bjsmith.github.io/tags/culture/</guid>
+      <guid>/tags/culture/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Honor Culture</title>
-      <link>https://bjsmith.github.io/tags/honor-culture/</link>
+      <link>/tags/honor-culture/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://bjsmith.github.io/tags/honor-culture/</guid>
+      <guid>/tags/honor-culture/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Morality</title>
-      <link>https://bjsmith.github.io/tags/morality/</link>
+      <link>/tags/morality/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://bjsmith.github.io/tags/morality/</guid>
+      <guid>/tags/morality/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Neural Structure</title>
-      <link>https://bjsmith.github.io/tags/neural-structure/</link>
+      <link>/tags/neural-structure/</link>
       <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://bjsmith.github.io/tags/neural-structure/</guid>
+      <guid>/tags/neural-structure/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Personality</title>
-      <link>https://bjsmith.github.io/tags/personality/</link>
+      <link>/tags/personality/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://bjsmith.github.io/tags/personality/</guid>
+      <guid>/tags/personality/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Prefrontal Cortex</title>
-      <link>https://bjsmith.github.io/tags/prefrontal-cortex/</link>
+      <link>/tags/prefrontal-cortex/</link>
       <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://bjsmith.github.io/tags/prefrontal-cortex/</guid>
+      <guid>/tags/prefrontal-cortex/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Reversal Learning</title>
-      <link>https://bjsmith.github.io/tags/reversal-learning/</link>
+      <link>/tags/reversal-learning/</link>
       <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://bjsmith.github.io/tags/reversal-learning/</guid>
+      <guid>/tags/reversal-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Stan</title>
-      <link>https://bjsmith.github.io/tags/stan/</link>
+      <link>/tags/stan/</link>
       <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://bjsmith.github.io/tags/stan/</guid>
+      <guid>/tags/stan/</guid>
       <description></description>
     </item>
     

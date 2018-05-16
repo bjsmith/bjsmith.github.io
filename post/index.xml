@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Ben Smith</title>
-    <link>https://bjsmith.github.io/post/</link>
+    <link>/post/</link>
     <description>Recent content in Posts on Ben Smith</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,11 +11,54 @@
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Component analysis of the 2016 US election</title>
+      <link>/post/us_election/</link>
+      <pubDate>Tue, 15 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/us_election/</guid>
+      <description>&lt;p&gt;For this analysis, I retried 4271 records of American adults surveyed before and after the 2016 election. I demonstrated separability of the data among several interesting dimensions. Moving forward, we should be able to examine how that separability relates to regional differences in voting patterns.&lt;/p&gt;
+&lt;p&gt;I calculated the principle components across all the dataset. Principle components analysis is a common dimension reduction technique intended to reduce the dimensionality of the data by rotating the data across the axes of the data that explain the most variance.&lt;/p&gt;
+&lt;p&gt;After finding the principle components, rather than selecting the components that explained the absolute most variance in the dataset, I selected components that were most predictive of the respondents’ voting records. To simplify the analysis, I selected only people who had voted and who had voted for either Hillary Clinton or Donald Trump.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## 
+##   Trump Clinton 
+##    1178    1290&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The graph shows the distribution of respondents’ ten most predictive principle components. Some components, on their own, very clearly separate the voters for each candidate..&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/us_election_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## (PresidentVote == &amp;quot;Trump&amp;quot;) ~ PC8 + PC6 + PC4 + PC5 + PC12 + PC7 + 
+##     PC42 + PC9 + PC61 + PC51&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+## Call:
+## glm(formula = as.formula(paste0(&amp;quot;(PresidentVote==\&amp;quot;Trump\&amp;quot;)~&amp;quot;, 
+##     paste0(&amp;quot;PC&amp;quot;, best.predicting.pcs, collapse = &amp;quot; + &amp;quot;))), family = binomial(link = &amp;quot;logit&amp;quot;), 
+##     data = AllPCs.ClintonTrump)
+## 
+## Standardized Coefficients::
+## (Intercept)         PC8         PC6         PC4         PC5        PC12 
+##   0.0000000   5.2453430  -5.0246795   2.1432676   2.3578101  -1.3903281 
+##         PC7        PC42         PC9        PC61        PC51 
+##  -1.4662449  -0.6570749  -1.0359121   0.5835931  -0.6094014&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Although this is a binomial prediction, I used a linear model below to easily find an &lt;span class=&#34;math inline&#34;&gt;\(R^2\)&lt;/span&gt; value for predicting voting from these principle components, &lt;span class=&#34;math inline&#34;&gt;\(R^2\)&lt;/span&gt; across all represents explaining 74% of the variance from the model.&lt;/p&gt;
+&lt;p&gt;We can then move forward to examine the data in a nationwide map.&lt;/p&gt;
+&lt;p&gt;What if we do a regional distribution?&lt;/p&gt;
+&lt;p&gt;These are the divisions we’ll be using:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/us_election_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;And this is what voter behavior looks like by division:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/us_election_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Here’s a few important principal components along with their distributions across the country:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/us_election_files/figure-html/GraphRegional-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;div id=&#34;discussion&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Discussion&lt;/h2&gt;
+&lt;p&gt;While media consumption (Radio vs. Web) tends to divide the Pacific States and New England with all other states, other issues divide along differnet geographic lines. On the economy and climate change, the Midwest sits squarely on one side, New England in the other, and the South and West sit somewhere in between. On perceptions of work availability, Texas and neighboring states stand apart.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Change in votes from 2014 to 2017</title>
-      <link>https://bjsmith.github.io/post/displaychange/</link>
+      <link>/post/displaychange/</link>
       <pubDate>Mon, 02 Oct 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://bjsmith.github.io/post/displaychange/</guid>
+      <guid>/post/displaychange/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Labour campaigned on &lt;a href=&#34;https://web.archive.org/web/20170830012136/http://www.labour.org.nz/immigration&#34;&gt;cutting immigration by 20,000 to 30,000 people every year&lt;/a&gt;. Labour’s subsequent 10% vote boost across general electorates was tempered by a less enthusiastic boost from electorates with many residents from Asia&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;, and in those electorates, National actually gained overall. Overall there is currently no significant link between an electorate’s Asian immigrant population and that electorate’s level of support for Labour. But the change from 2014 to 2017 is significant: for every 1,000 residents from Asia in an electorate, National’s vote went up by 0.3% while Labour’s went down by 0.28% over the three-year period marked by a series of public statements and policies by Labour widely perceived to be anti-immigrant and anti-Chinese. Labour could risk alienating kiwi voters from Asia further in the future if they continue down the same path from now until the next election.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Labour campaigned against immigration in the last election and &lt;a href=&#34;https://thespinoff.co.nz/politics/29-09-2017/how-did-labours-immigration-stance-impact-its-immigrant-vote/&#34;&gt;there has been speculation&lt;/a&gt; that their anti-immigrant stance hurt Labour in the Asian immigrant vote. Some data has come out suggesting &lt;a href=&#34;http://www.nzherald.co.nz/nz/news/article.cfm?c_id=1&amp;amp;objectid=11919332&#34;&gt;widespread support for the National Party from Chinese voters&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I can’t directly test immigrant support for Labour, but I can test the support for Labour in each electorate and compare that to the proportion of immigrants in that electorate.&lt;/p&gt;
@@ -23,7 +66,7 @@
 &lt;div id=&#34;theres-no-significant-link-between-an-electorates-residents-from-asia-and-labour-support&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;There’s no significant link between an electorate’s residents from Asia and Labour support…&lt;/h3&gt;
 &lt;p&gt;For context, let’s look at how the data in 2014 and 2017 side-by-side.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bjsmith.github.io/post/displayChange_files/figure-html/AsianimmigrantVotersLabourSupport2014-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/displayChange_files/figure-html/AsianimmigrantVotersLabourSupport2014-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;For both years there’s no clear trend: you can see that in both 2014 and 2017, overall, there’s no significant association among electorates between voting Labour and the number of Asian residents.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;but-there-is-a-link-between-an-electorates-asian-origin-population-and-the-swing-from-2014-to-2017&#34; class=&#34;section level3&#34;&gt;
@@ -31,7 +74,7 @@
 &lt;p&gt;But if anti-immigration rhetoric from Labour in 2017 affected the results of the election, what we are more interested in is the &lt;em&gt;change from 2014 to 2017&lt;/em&gt;. Overall there are lots of things that affect the way an electorate votes and most don’t change from one election to the next. By just looking at the &lt;em&gt;change&lt;/em&gt;, we can get an idea of how each electorate was affected by circumstances in this election compared to the last one.&lt;/p&gt;
 &lt;p&gt;If we want to know whether Labour’s stances over the last three years might have hurt it with Asian voters, then we are less interested in the vote in 2017 as we are in the &lt;em&gt;change&lt;/em&gt; in votes from 2014 to 2017.&lt;/p&gt;
 &lt;!--Our question is: is there a relationship between the portion of residents from Asia in each electorate and the change in Labour support?--&gt;
-&lt;p&gt;&lt;img src=&#34;https://bjsmith.github.io/post/displayChange_files/figure-html/AsianimmigrantVotersLabourSupport-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/displayChange_files/figure-html/AsianimmigrantVotersLabourSupport-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;The first thing we can see here is that Labour improved its record in &lt;em&gt;every&lt;/em&gt; electorate, by an average of from 25% to 35% across the general electorates. Still, that wasn’t enough to quite beat National, at least in pure numbers, this time around.&lt;/p&gt;
 &lt;!--The second interesting pattern that jumps out is that the *least* improvement occured in South Auckland seats where Labour&#39;s vote was the highest - Manukau East, Manurewa, and Mangere. It seems like Labour&#39;s vote here was `maxed out&#39; and wasn&#39;t going to get any bigger. The electorates with the *largest* improvement - greater than 12% or so - are all moderately high Labour supporting electorates - not the loweest, but not the highest. Many are important student electorates: Auckland Central, Dunedin North, and Wellington Central. --&gt;
 &lt;p&gt;But on to our question of interest. There is a clear correlation here: the more residents from Asia within an electorate, the &lt;em&gt;less&lt;/em&gt; boost that electorate got for Labour from 2014 to 2017 (r=-0.36, p=0.0034).&lt;/p&gt;
@@ -45,13 +88,13 @@
 &lt;div id=&#34;labours-loss-was-nationals-gain&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Labour’s loss was National’s gain&lt;/h3&gt;
 &lt;p&gt;It might also be interesting to see how other parties did:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bjsmith.github.io/post/displayChange_files/figure-html/OtherParties-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/displayChange_files/figure-html/OtherParties-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;This is actually instructive, too. It turns out that there’s a very &lt;em&gt;strong&lt;/em&gt; relationship between National support and Asian residents in an electorate. For every 3300 Asian residents in an electorate, there is a 1% &lt;em&gt;rise&lt;/em&gt; in National support.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;results-were-similar-for-electorates-with-high-immigrant-populations-from-the-pacific-islands-and-africabut-not-the-uk&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Results were similar for electorates with high immigrant populations from the Pacific Islands and Africa…but not the UK&lt;/h3&gt;
 &lt;p&gt;We can compare these patterns to correlations between change in Labour support and immigrants in electorates from other regions.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bjsmith.github.io/post/displayChange_files/figure-html/OtherRegionsimmigrantVotersLabourSupport-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/displayChange_files/figure-html/OtherRegionsimmigrantVotersLabourSupport-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Electorates with high numbers of immigrants from Pacific Island and Middle East and Africa sources followed the same significant trend as those with high numbers of immigrants from Asia. We actually saw the reverse pattern for electorates with high numbers of immigrants from the UK and Ireland: a larger swing &lt;em&gt;towards&lt;/em&gt; Labour. &lt;!--
 # ```{r Difference, echo=FALSE, warning=FALSE}
 # electorate.alldata[,LabourNationalDifferenceChange:=Change.Labour-Change.National]
@@ -105,10 +148,10 @@
 &lt;h3&gt;These patterns cannot be explained by electorate median income.&lt;/h3&gt;
 &lt;p&gt;Electorate median income does not explain the pattern we see.&lt;/p&gt;
 &lt;p&gt;As we’d expect, electorate median income is certainly a strong predictor of voting for National vs. Labour (r=0.43, p&amp;lt;0.001):&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bjsmith.github.io/post/displayChange_files/figure-html/MedianIncome1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/displayChange_files/figure-html/MedianIncome1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;However, in a linear model, electorate median income does not explain the correlation between change in Labour vote and number of residents from Asia in an electorate. Furthermore, electorate median income is statistically &lt;em&gt;unrelated&lt;/em&gt; to Labour’s change in support from 2014 to 2017, and if anything is actually related to a change &lt;em&gt;against&lt;/em&gt; National from 2014 to 2017 (r=0.25, p&amp;lt;0.05). This may be because income became less important than other issues in 2017 compared to 2014.&lt;/p&gt;
 &lt;p&gt;That would echo a similar trend in the United States and United Kingdom this decade, where the most salient political issues between the left and the right are on issues like immigration and globalization rather than domestic economic policy. The difference is that in New Zealand, it has been traditionally right-wing parties that have, on the basis of economic liberalism, lined up to be the more favorable to immigration.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bjsmith.github.io/post/displayChange_files/figure-html/MedainIncome2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/displayChange_files/figure-html/MedainIncome2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;what-does-this-mean&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;What does this mean?&lt;/h3&gt;
@@ -127,18 +170,18 @@
     
     <item>
       <title>Relative reliability of Models and variational Bayes</title>
-      <link>https://bjsmith.github.io/post/compare_models/</link>
+      <link>/post/compare_models/</link>
       <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://bjsmith.github.io/post/compare_models/</guid>
-      <description>&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://bjsmith.github.io/rmarkdown-libs/plotlyjs/plotly-htmlwidgets.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/plotlyjs/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/plotly-binding/plotly.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://bjsmith.github.io/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/typedarray/typedarray.min.js&#34;&gt;&lt;/script&gt;
+      <guid>/post/compare_models/</guid>
+      <description>&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/plotlyjs/plotly-htmlwidgets.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/plotlyjs/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/plotly-binding/plotly.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/typedarray/typedarray.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;I am working on using a Bayesian model to estimate parameters for our reward learning data. I’m extending &lt;a href=&#34;https://rpubs.com/CCSL/hBayesDM&#34;&gt;Nate Haines’ Double Update Model for Reversal Learning&lt;/a&gt; &lt;span class=&#34;citation&#34;&gt;(Ahn, Haines, and Zhang 2017)&lt;/span&gt;. Nate modified the version available in his package hBayesDM to work with our dataset, which is a deterministic Reversal Learning task. I have since incrementally extended it to handle two different tasks (reward and punishment learning) and repeated runs.&lt;/p&gt;
@@ -315,13 +358,13 @@ m.reward.mu.run1$ModelName&amp;lt;-sub(&amp;quot;double_update&amp;quot;,&amp;qu
      geom_hdi(size=2, lineend = &amp;quot;round&amp;quot;,alpha=0.5,credible_mass=0.95)+
     facet_grid(ModelName~AnalysisRepetition)+
     labs(title=paste0(&amp;quot;mu statistic in reward rounds, alpha&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://bjsmith.github.io/post/compare_models_files/figure-html/AOVVisualize-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/compare_models_files/figure-html/AOVVisualize-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  ggplot(m.reward.mu.run1[Parameter==&amp;quot;beta&amp;quot;],aes(x=Value,fill=factor(Group),color=factor(Group)))+
     geom_freqpoly(alpha=0.9,binwidth=0.001)+
      geom_hdi(size=2, lineend = &amp;quot;round&amp;quot;,alpha=0.9,credible_mass=0.95)+
     facet_grid(ModelName~AnalysisRepetition)+
     labs(title=paste0(&amp;quot;mu statistic in reward rounds, beta&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://bjsmith.github.io/post/compare_models_files/figure-html/AOVVisualize-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/compare_models_files/figure-html/AOVVisualize-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;There is one thing consistent across all samples for the reward round, no matter what model is used and across both repetitions. Meth users have lower or similar learning rates compared to Non-users. In no runs did we find that meth users had higher learning rates or inverse temperatures than non-users.&lt;/p&gt;
 &lt;p&gt;However, there is considerable variation across both runs and models. Importantly, for the final model, which takes into account Run2 and also calculates both reward and punishment, posterior alpha (learning rate) samples overlapped such that it is visually not clear there was a significant difference between groups. If we examine the difference between groups for each analysis, we can see that the 95% HDI includes (and in fact, is pretty closely centered around) zero for two of the three analyses run for the final model.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;alpha_lastModel&amp;lt;-tidyr::spread(m.reward.mu.run1[Parameter==&amp;quot;alpha&amp;quot; &amp;amp; ModelName==&amp;quot;DU_rpo_repeated_runs&amp;quot;],
@@ -360,18 +403,18 @@ plotly::ggplotly(ggplot(alpha_lastModel,
     
     <item>
       <title>Making a confidence interval ggplot2 `geom`</title>
-      <link>https://bjsmith.github.io/post/geom_hdi_for_ggplot2/</link>
+      <link>/post/geom_hdi_for_ggplot2/</link>
       <pubDate>Sat, 23 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://bjsmith.github.io/post/geom_hdi_for_ggplot2/</guid>
-      <description>&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://bjsmith.github.io/rmarkdown-libs/plotlyjs/plotly-htmlwidgets.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/plotlyjs/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/plotly-binding/plotly.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://bjsmith.github.io/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/typedarray/typedarray.min.js&#34;&gt;&lt;/script&gt;
+      <guid>/post/geom_hdi_for_ggplot2/</guid>
+      <description>&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/plotlyjs/plotly-htmlwidgets.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/plotlyjs/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/plotly-binding/plotly.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/typedarray/typedarray.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;For evaluating posteriors in Bayesian analysis it is pretty common to draw a “Highest Density Interval” to indicate the zone of highest (consecutive) density within a distribution, which may be plotted in a scatter plot or a histogram or density plot or similar.&lt;/p&gt;
@@ -396,7 +439,7 @@ dat&amp;lt;-data.frame(&amp;quot;x&amp;quot;=c(rnorm(1000,0,1)))
 
 ggplot(dat, aes(x=x)) +
    geom_histogram(binwidth=0.1)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://bjsmith.github.io/post/geom_hdi_for_ggplot2_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/geom_hdi_for_ggplot2_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;So far, so good. How would we do a 95% HDI in this data? Before we dive in and create the &lt;code&gt;geom&lt;/code&gt;, let’s draw it manually. We can use this code later to build the &lt;code&gt;geom&lt;/code&gt; itself. &lt;code&gt;geom_segment&lt;/code&gt; is a good basic, flexible geom which would allow us to draw a line. We can specify &lt;code&gt;x&lt;/code&gt;, &lt;code&gt;y&lt;/code&gt;, &lt;code&gt;xend&lt;/code&gt;, and &lt;code&gt;yend&lt;/code&gt; to control the precise look of the line.&lt;/p&gt;
 &lt;p&gt;But before we draw the HDI we need to know where to put it! The &lt;code&gt;hBayesDM&lt;/code&gt; package has a suitable HDI calculator, so we’ll use that.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dat.hdi&amp;lt;-hBayesDM::HDIofMCMC(dat$x)&lt;/code&gt;&lt;/pre&gt;
@@ -407,12 +450,12 @@ ggplot(dat, aes(x=x)) +
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(dat, aes(x=x)) +
    geom_histogram(binwidth=0.1)+
   geom_segment(x=dat.hdi[1],xend=dat.hdi[2],y=0,yend=0)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://bjsmith.github.io/post/geom_hdi_for_ggplot2_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/geom_hdi_for_ggplot2_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;That’s a little hard to see, so we can draw it with some appropriate properties:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(dat, aes(x=x)) +
    geom_histogram(binwidth=0.1)+
   geom_segment(x=dat.hdi[1],xend=dat.hdi[2],y=0,yend=0,color=&amp;quot;blue&amp;quot;,size=2,lineend=&amp;quot;round&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://bjsmith.github.io/post/geom_hdi_for_ggplot2_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/geom_hdi_for_ggplot2_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Seems good. Now, let’s say we want to do this with a whole bunch of graphs; maybe we want multiple HDIs on each graph, pertaining to different groups, and we want the properties of the line to automatically follow the properties (e.g., color) we set for different groups.&lt;/p&gt;
 &lt;p&gt;How can we encapsulate this functionality in a single &lt;code&gt;geom&lt;/code&gt;?&lt;/p&gt;
 &lt;/div&gt;
@@ -496,7 +539,7 @@ height.plot&amp;lt;-ggplot(heights.usa, aes(x=height, group=people, fill=factor(
  labs(title=&amp;quot;US adult height distribution by gender\nCount per 10,000 adults&amp;quot;,x=&amp;quot;height (cm)&amp;quot;)
 
 height.plot&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://bjsmith.github.io/post/geom_hdi_for_ggplot2_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/geom_hdi_for_ggplot2_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;With a bit of work, we could have the function stagger these hdis if you didn’t want them lying on top of each other.&lt;/p&gt;
 &lt;p&gt;However, my priority was to get this looking nice in plotly! This required a little extra work.&lt;/p&gt;
 &lt;/div&gt;

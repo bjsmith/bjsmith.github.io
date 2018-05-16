@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bayesian Hierarchical Modeling on Ben Smith</title>
-    <link>https://bjsmith.github.io/tags/bayesian-hierarchical-modeling/</link>
+    <link>/tags/bayesian-hierarchical-modeling/</link>
     <description>Recent content in Bayesian Hierarchical Modeling on Ben Smith</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,18 +12,18 @@
     
     <item>
       <title>Demonstrating connections between structure and function through Bayesian modeling</title>
-      <link>https://bjsmith.github.io/project/joint-modeling/</link>
+      <link>/project/joint-modeling/</link>
       <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://bjsmith.github.io/project/joint-modeling/</guid>
-      <description>&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://bjsmith.github.io/rmarkdown-libs/plotlyjs/plotly-htmlwidgets.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/plotlyjs/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/plotly-binding/plotly.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://bjsmith.github.io/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/typedarray/typedarray.min.js&#34;&gt;&lt;/script&gt;
+      <guid>/project/joint-modeling/</guid>
+      <description>&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/plotlyjs/plotly-htmlwidgets.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/plotlyjs/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/plotly-binding/plotly.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/typedarray/typedarray.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;I use Bayesian Joint Modeling &lt;span class=&#34;citation&#34;&gt;(Turner et al. 2013, &lt;span class=&#34;citation&#34;&gt;Turner et al. (2016)&lt;/span&gt;)&lt;/span&gt; to describe neural correlates of reward responsiveness, inhibition, and impulsivity and the interactions between them in a sample of 170 men who have sex with men (MSM). Bayesian Joint Modeling is a statistical framework developed by BM Turner and colleagues for combining models of multiple information sources to better estimate the suitability of models for each source.&lt;/p&gt;
@@ -33,7 +33,7 @@
 &lt;div id=&#34;work-so-far&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Work so far&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://bjsmith.github.io/post/compare_models/&#34;&gt;Testing stan-based models in R&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/post/compare_models/&#34;&gt;Testing stan-based models in R&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Recent work with &lt;a href=&#34;http://haines-lab.com/&#34;&gt;Nate Haines&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Behavioral analysis&lt;/li&gt;
 &lt;/ul&gt;
@@ -62,18 +62,18 @@
     
     <item>
       <title>Relative reliability of Models and variational Bayes</title>
-      <link>https://bjsmith.github.io/post/compare_models/</link>
+      <link>/post/compare_models/</link>
       <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://bjsmith.github.io/post/compare_models/</guid>
-      <description>&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://bjsmith.github.io/rmarkdown-libs/plotlyjs/plotly-htmlwidgets.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/plotlyjs/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/plotly-binding/plotly.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://bjsmith.github.io/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/typedarray/typedarray.min.js&#34;&gt;&lt;/script&gt;
+      <guid>/post/compare_models/</guid>
+      <description>&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/plotlyjs/plotly-htmlwidgets.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/plotlyjs/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/plotly-binding/plotly.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/typedarray/typedarray.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;I am working on using a Bayesian model to estimate parameters for our reward learning data. I’m extending &lt;a href=&#34;https://rpubs.com/CCSL/hBayesDM&#34;&gt;Nate Haines’ Double Update Model for Reversal Learning&lt;/a&gt; &lt;span class=&#34;citation&#34;&gt;(Ahn, Haines, and Zhang 2017)&lt;/span&gt;. Nate modified the version available in his package hBayesDM to work with our dataset, which is a deterministic Reversal Learning task. I have since incrementally extended it to handle two different tasks (reward and punishment learning) and repeated runs.&lt;/p&gt;
@@ -250,13 +250,13 @@ m.reward.mu.run1$ModelName&amp;lt;-sub(&amp;quot;double_update&amp;quot;,&amp;qu
      geom_hdi(size=2, lineend = &amp;quot;round&amp;quot;,alpha=0.5,credible_mass=0.95)+
     facet_grid(ModelName~AnalysisRepetition)+
     labs(title=paste0(&amp;quot;mu statistic in reward rounds, alpha&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://bjsmith.github.io/post/compare_models_files/figure-html/AOVVisualize-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/compare_models_files/figure-html/AOVVisualize-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;  ggplot(m.reward.mu.run1[Parameter==&amp;quot;beta&amp;quot;],aes(x=Value,fill=factor(Group),color=factor(Group)))+
     geom_freqpoly(alpha=0.9,binwidth=0.001)+
      geom_hdi(size=2, lineend = &amp;quot;round&amp;quot;,alpha=0.9,credible_mass=0.95)+
     facet_grid(ModelName~AnalysisRepetition)+
     labs(title=paste0(&amp;quot;mu statistic in reward rounds, beta&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://bjsmith.github.io/post/compare_models_files/figure-html/AOVVisualize-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/compare_models_files/figure-html/AOVVisualize-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;There is one thing consistent across all samples for the reward round, no matter what model is used and across both repetitions. Meth users have lower or similar learning rates compared to Non-users. In no runs did we find that meth users had higher learning rates or inverse temperatures than non-users.&lt;/p&gt;
 &lt;p&gt;However, there is considerable variation across both runs and models. Importantly, for the final model, which takes into account Run2 and also calculates both reward and punishment, posterior alpha (learning rate) samples overlapped such that it is visually not clear there was a significant difference between groups. If we examine the difference between groups for each analysis, we can see that the 95% HDI includes (and in fact, is pretty closely centered around) zero for two of the three analyses run for the final model.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;alpha_lastModel&amp;lt;-tidyr::spread(m.reward.mu.run1[Parameter==&amp;quot;alpha&amp;quot; &amp;amp; ModelName==&amp;quot;DU_rpo_repeated_runs&amp;quot;],

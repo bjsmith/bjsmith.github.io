@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Reversal Learning on Ben Smith</title>
-    <link>https://bjsmith.github.io/tags/reversal-learning/</link>
+    <link>/tags/reversal-learning/</link>
     <description>Recent content in Reversal Learning on Ben Smith</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,18 +12,18 @@
     
     <item>
       <title>Demonstrating connections between structure and function through Bayesian modeling</title>
-      <link>https://bjsmith.github.io/project/joint-modeling/</link>
+      <link>/project/joint-modeling/</link>
       <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://bjsmith.github.io/project/joint-modeling/</guid>
-      <description>&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://bjsmith.github.io/rmarkdown-libs/plotlyjs/plotly-htmlwidgets.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/plotlyjs/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/plotly-binding/plotly.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://bjsmith.github.io/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://bjsmith.github.io/rmarkdown-libs/typedarray/typedarray.min.js&#34;&gt;&lt;/script&gt;
+      <guid>/project/joint-modeling/</guid>
+      <description>&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/plotlyjs/plotly-htmlwidgets.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/plotlyjs/plotly-latest.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/plotly-binding/plotly.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/typedarray/typedarray.min.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;I use Bayesian Joint Modeling &lt;span class=&#34;citation&#34;&gt;(Turner et al. 2013, &lt;span class=&#34;citation&#34;&gt;Turner et al. (2016)&lt;/span&gt;)&lt;/span&gt; to describe neural correlates of reward responsiveness, inhibition, and impulsivity and the interactions between them in a sample of 170 men who have sex with men (MSM). Bayesian Joint Modeling is a statistical framework developed by BM Turner and colleagues for combining models of multiple information sources to better estimate the suitability of models for each source.&lt;/p&gt;
@@ -33,7 +33,7 @@
 &lt;div id=&#34;work-so-far&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Work so far&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://bjsmith.github.io/post/compare_models/&#34;&gt;Testing stan-based models in R&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;/post/compare_models/&#34;&gt;Testing stan-based models in R&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Recent work with &lt;a href=&#34;http://haines-lab.com/&#34;&gt;Nate Haines&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Behavioral analysis&lt;/li&gt;
 &lt;/ul&gt;
