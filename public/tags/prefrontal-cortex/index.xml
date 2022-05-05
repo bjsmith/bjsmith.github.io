@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>prefrontal-cortex on Ben Smith</title>
+    <link>https://bjsmith.github.io/tags/prefrontal-cortex/</link>
+    <description>Recent content in prefrontal-cortex on Ben Smith</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2022 Ben Smith</copyright>
+    <lastBuildDate>Sun, 17 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bjsmith.github.io/tags/prefrontal-cortex/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A meta-analytical review of brain activity associated with intertemporal decisions: Evidence for a rostal-caudal tangibility axis</title>
+      <link>https://bjsmith.github.io/project/tangibility-hypothesis/</link>
+      <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/project/tangibility-hypothesis/</guid>
+      <description>With evidence from a meta-analysis, I propose a rostral-caudal tangibility axis that helps to create general processes of psychological distance</description>
+    </item>
+    
+  </channel>
+</rss>

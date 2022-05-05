@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>stan on Ben Smith</title>
+    <link>https://bjsmith.github.io/tags/stan/</link>
+    <description>Recent content in stan on Ben Smith</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2022 Ben Smith</copyright>
+    <lastBuildDate>Mon, 25 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bjsmith.github.io/tags/stan/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Demonstrating connections between structure and function through Bayesian modeling</title>
+      <link>https://bjsmith.github.io/project/joint-modeling/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/project/joint-modeling/</guid>
+      <description>I use Bayesian Joint Modeling to describe neural correlates of reward responsiveness, inhibition, and impulsivity and the interactions between them in a sample of 170 men who have sex with men.</description>
+    </item>
+    
+    <item>
+      <title>Relative reliability of Models and variational Bayes</title>
+      <link>https://bjsmith.github.io/post/compare_models/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/post/compare_models/</guid>
+      <description>I am working on using a Bayesian model to estimate parameters for our reward learning data. I’m extending Nate Haines’ Double Update Model for Reversal Learning (Ahn, Haines, and Zhang 2017). Nate modified the version available in his package hBayesDM to work with our dataset, which is a deterministic Reversal Learning task. I have since incrementally extended it to handle two different tasks (reward and punishment learning) and repeated runs.</description>
+    </item>
+    
+  </channel>
+</rss>

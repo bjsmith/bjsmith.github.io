@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Ben Smith</title>
+    <link>https://bjsmith.github.io/post/</link>
+    <description>Recent content in Posts on Ben Smith</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2022 Ben Smith</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0800</lastBuildDate>
+    
+	<atom:link href="https://bjsmith.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Component analysis of the 2016 US election</title>
+      <link>https://bjsmith.github.io/post/us_election/</link>
+      <pubDate>Tue, 15 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/post/us_election/</guid>
+      <description>For this analysis, I retried 4271 records of American adults surveyed before and after the 2016 election. I demonstrated separability of the data among several interesting dimensions. Moving forward, we should be able to examine how that separability relates to regional differences in voting patterns.
+I calculated the principle components across all the dataset. Principle components analysis is a common dimension reduction technique intended to reduce the dimensionality of the data by rotating the data across the axes of the data that explain the most variance.</description>
+    </item>
+    
+    <item>
+      <title>Change in votes from 2014 to 2017</title>
+      <link>https://bjsmith.github.io/post/displaychange/</link>
+      <pubDate>Mon, 02 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/post/displaychange/</guid>
+      <description>Labour campaigned on cutting immigration by 20,000 to 30,000 people every year. Labour’s subsequent 10% vote boost across general electorates was tempered by a less enthusiastic boost from electorates with many residents from Asia1, and in those electorates, National actually gained overall. Overall there is currently no significant link between an electorate’s Asian immigrant population and that electorate’s level of support for Labour. But the change from 2014 to 2017 is significant: for every 1,000 residents from Asia in an electorate, National’s vote went up by 0.</description>
+    </item>
+    
+    <item>
+      <title>Relative reliability of Models and variational Bayes</title>
+      <link>https://bjsmith.github.io/post/compare_models/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/post/compare_models/</guid>
+      <description>I am working on using a Bayesian model to estimate parameters for our reward learning data. I’m extending Nate Haines’ Double Update Model for Reversal Learning (Ahn, Haines, and Zhang 2017). Nate modified the version available in his package hBayesDM to work with our dataset, which is a deterministic Reversal Learning task. I have since incrementally extended it to handle two different tasks (reward and punishment learning) and repeated runs.</description>
+    </item>
+    
+    <item>
+      <title>Making a confidence interval ggplot2 `geom`</title>
+      <link>https://bjsmith.github.io/post/geom_hdi_for_ggplot2/</link>
+      <pubDate>Sat, 23 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/post/geom_hdi_for_ggplot2/</guid>
+      <description>For evaluating posteriors in Bayesian analysis it is pretty common to draw a “Highest Density Interval” to indicate the zone of highest (consecutive) density within a distribution, which may be plotted in a scatter plot or a histogram or density plot or similar.
+When working in ggplot, you’ll often add multiple layers to your graph in the form of “geoms”: for instance, a geom_point to show a scatterplot, which you could overlay with geom_abline to draw a trendline through the points.</description>
+    </item>
+    
+  </channel>
+</rss>

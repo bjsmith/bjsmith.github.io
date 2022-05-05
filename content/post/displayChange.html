@@ -1,0 +1,117 @@
+---
+title: "Change in votes from 2014 to 2017"
+author: "Ben Smith"
+date: "2017-10-02"
+output: 
+  html_document: 
+    self_contained: no
+---
+
+
+
+<p><strong>Labour campaigned on <a href="https://web.archive.org/web/20170830012136/http://www.labour.org.nz/immigration">cutting immigration by 20,000 to 30,000 people every year</a>. Labour’s subsequent 10% vote boost across general electorates was tempered by a less enthusiastic boost from electorates with many residents from Asia<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>, and in those electorates, National actually gained overall. Overall there is currently no significant link between an electorate’s Asian immigrant population and that electorate’s level of support for Labour. But the change from 2014 to 2017 is significant: for every 1,000 residents from Asia in an electorate, National’s vote went up by 0.3% while Labour’s went down by 0.28% over the three-year period marked by a series of public statements and policies by Labour widely perceived to be anti-immigrant and anti-Chinese. Labour could risk alienating kiwi voters from Asia further in the future if they continue down the same path from now until the next election.</strong></p>
+<p>Labour campaigned against immigration in the last election and <a href="https://thespinoff.co.nz/politics/29-09-2017/how-did-labours-immigration-stance-impact-its-immigrant-vote/">there has been speculation</a> that their anti-immigrant stance hurt Labour in the Asian immigrant vote. Some data has come out suggesting <a href="http://www.nzherald.co.nz/nz/news/article.cfm?c_id=1&amp;objectid=11919332">widespread support for the National Party from Chinese voters</a>.</p>
+<p>I can’t directly test immigrant support for Labour, but I can test the support for Labour in each electorate and compare that to the proportion of immigrants in that electorate.</p>
+<p>Statistics New Zealand provide easily accessible information on ethnic groups and world birthplace in each electorate. Unfortunately, neither dataset allows us to drill down to distinguish between different Asian countries or cultures, for instance, to look at relationships to Chinese or Indian residents in particular. Because we’re interested in immigration, I used the data on birthplace rather than ethnicity. So every time I talk about “Asian immigrant residents” or “residents from Asia” in an electorate here, we’re looking at the number of people born in Asia (excluding the Middle East) who were in that electorate on Census Night 2013.</p>
+<div id="theres-no-significant-link-between-an-electorates-residents-from-asia-and-labour-support" class="section level3">
+<h3>There’s no significant link between an electorate’s residents from Asia and Labour support…</h3>
+<p>For context, let’s look at how the data in 2014 and 2017 side-by-side.</p>
+<p><img src="/post/displayChange_files/figure-html/AsianimmigrantVotersLabourSupport2014-1.png" width="672" /></p>
+<p>For both years there’s no clear trend: you can see that in both 2014 and 2017, overall, there’s no significant association among electorates between voting Labour and the number of Asian residents.</p>
+</div>
+<div id="but-there-is-a-link-between-an-electorates-asian-origin-population-and-the-swing-from-2014-to-2017" class="section level3">
+<h3>…But there is a link between an electorate’s Asian-origin population and the <em>swing</em> from 2014 to 2017</h3>
+<p>But if anti-immigration rhetoric from Labour in 2017 affected the results of the election, what we are more interested in is the <em>change from 2014 to 2017</em>. Overall there are lots of things that affect the way an electorate votes and most don’t change from one election to the next. By just looking at the <em>change</em>, we can get an idea of how each electorate was affected by circumstances in this election compared to the last one.</p>
+<p>If we want to know whether Labour’s stances over the last three years might have hurt it with Asian voters, then we are less interested in the vote in 2017 as we are in the <em>change</em> in votes from 2014 to 2017.</p>
+<!--Our question is: is there a relationship between the portion of residents from Asia in each electorate and the change in Labour support?-->
+<p><img src="/post/displayChange_files/figure-html/AsianimmigrantVotersLabourSupport-1.png" width="672" /></p>
+<p>The first thing we can see here is that Labour improved its record in <em>every</em> electorate, by an average of from 25% to 35% across the general electorates. Still, that wasn’t enough to quite beat National, at least in pure numbers, this time around.</p>
+<!--The second interesting pattern that jumps out is that the *least* improvement occured in South Auckland seats where Labour's vote was the highest - Manukau East, Manurewa, and Mangere. It seems like Labour's vote here was `maxed out' and wasn't going to get any bigger. The electorates with the *largest* improvement - greater than 12% or so - are all moderately high Labour supporting electorates - not the loweest, but not the highest. Many are important student electorates: Auckland Central, Dunedin North, and Wellington Central. -->
+<p>But on to our question of interest. There is a clear correlation here: the more residents from Asia within an electorate, the <em>less</em> boost that electorate got for Labour from 2014 to 2017 (r=-0.36, p=0.0034).</p>
+<p>This doesn’t prove that if Labour hadn’t been through the Chinese-names saga, and hadn’t campaigned against immigration, that it would have done better. But is there any other reasonable explanation for this pattern?</p>
+</div>
+<div id="considering-the-effect-of-greens-support-doesnt-change-the-result" class="section level3">
+<h3>Considering the effect of Greens support doesn’t change the result</h3>
+<p>It is possible the difference change we can see here arose from other factors. Urban and student areas feature prominently in the regions with the largest changes, so perhaps the change is driven mainly by students. Of those regions, only Auckland Central has a particularly high share of residents from Asia. There is evidence that whiter <a href="https://thestandard.org.nz/where-did-labour-gain-its-extra-votes/">urban liberal electorates</a> were the largest contributor to Labour’s success, maybe at the Greens’ expense. We can estimate their effect by using the Greens’ success in each electorate in 2014 to predict Labour’s success in 2017.</p>
+<p>Adding Greens’ success in 2014 as a predictor only makes the effect of Asian immigrant residents in an electorate even more important. We can calculate that on average, for every 950 votes the Green party got in an electorate in 2014, we’d predict that electorate to have a 1% <em>rise</em> in Labour support from 2014 to 2017. Using the same method, we predict that for every 3600 Asian immigrant residents in an electorate, there is a 1% <em>fall</em> in Labour support, or, more accurately, 1% less of an increase from 2014 to 2017.</p>
+</div>
+<div id="labours-loss-was-nationals-gain" class="section level3">
+<h3>Labour’s loss was National’s gain</h3>
+<p>It might also be interesting to see how other parties did:</p>
+<p><img src="/post/displayChange_files/figure-html/OtherParties-1.png" width="672" /></p>
+<p>This is actually instructive, too. It turns out that there’s a very <em>strong</em> relationship between National support and Asian residents in an electorate. For every 3300 Asian residents in an electorate, there is a 1% <em>rise</em> in National support.</p>
+</div>
+<div id="results-were-similar-for-electorates-with-high-immigrant-populations-from-the-pacific-islands-and-africabut-not-the-uk" class="section level3">
+<h3>Results were similar for electorates with high immigrant populations from the Pacific Islands and Africa…but not the UK</h3>
+<p>We can compare these patterns to correlations between change in Labour support and immigrants in electorates from other regions.</p>
+<p><img src="/post/displayChange_files/figure-html/OtherRegionsimmigrantVotersLabourSupport-1.png" width="672" /></p>
+<p>Electorates with high numbers of immigrants from Pacific Island and Middle East and Africa sources followed the same significant trend as those with high numbers of immigrants from Asia. We actually saw the reverse pattern for electorates with high numbers of immigrants from the UK and Ireland: a larger swing <em>towards</em> Labour. <!--
+# ```{r Difference, echo=FALSE, warning=FALSE}
+# electorate.alldata[,LabourNationalDifferenceChange:=Change.Labour-Change.National]
+# plot.allsourceschange<-ggplot(
+#   electorate.alldata[RegionOrigin %in% c("Asia","United Kingdom and Ireland","Pacific Islands","Middle East and Africa")],
+#   aes(x=Total.people.stated.1.,y=LabourNationalDifferenceChange,
+#       color=LabourNationalDifference))+
+#   geom_smooth(method="lm",color="black")+
+#   geom_point(aes(Label=Electorate))+
+#   labs(x="residents born in each region",y="2014 to 2017 % Change in Labour-National Margin",title="General Electorates")+
+#   scale_size_continuous(guide=FALSE)+
+#   scale_color_gradient(low="blue", high="red",space="Lab")+
+#   guides(color=guide_legend(title="% of Labour vote in 2017"))+
+#   theme(legend.position="bottom")+
+#   facet_wrap(~RegionOrigin,strip.position = "bottom",scales="free_x")
+# plot.allsourceschange+geom_text(aes(label=Electorate),hjust=-0.05,vjust=0,size=2)+
+#   theme(legend.position="bottom")
+# #plotly::ggplotly(plot.asianvoters)
+# 
+# #lm.beta::lm.beta(lm(Change.Labour~Total.people.stated.1.,electorate.alldata[RegionOrigin=="Asia"]))
+# # labour.asian.voters.cor<-cor.test(electorate.alldata[RegionOrigin=="Asia"]$Change.Labour,electorate.alldata[RegionOrigin=="Asia"]$Total.people.stated.1.)
+# ```
+--></p>
+<!-- What about Greens voters? -->
+<!-- ```{r OtherPartiesGreens, echo=FALSE, warning=FALSE} -->
+<!-- #we need to get the data in a format where we have  -->
+<!-- #-support for Party (e.g., Labour) -->
+<!-- #for each electorate -->
+<!-- #Proportion of Asian immigrants in that electorate - should be TotalPeopleStated column. -->
+<!-- #Change in voters is easy and is already here. -->
+<!-- plot.asianvoters<-ggplot(electorate.alldata[RegionOrigin=="Asia"], -->
+<!--                         aes(x=Total.people.stated.1.,y=Change.Green, -->
+<!--                             color=Pct.Green.2017 -->
+<!--                             ))+ -->
+<!--   geom_smooth(method="lm",color="green")+ -->
+<!--   geom_point(aes(Label=Electorate))+ -->
+<!--   labs(x="residents from Asia",y="2014 to 2017 % Change in Greens Support",title="General Electorates")+ -->
+<!--   scale_size_continuous(guide=FALSE)+ -->
+<!--   scale_color_gradient(low="black", high="green",space="Lab")+ -->
+<!--   guides(color=guide_legend(title="% of Greens vote in 2017"))+ -->
+<!--   theme(legend.position="bottom") -->
+<!-- plot.asianvoters+geom_text(aes(label=Electorate),hjust=-0.05,vjust=0,size=2)+ -->
+<!--   theme(legend.position="bottom") -->
+<!-- #plotly::ggplotly(plot.asianvoters) -->
+<!-- #lm.beta::lm.beta(lm(Change.Labour~Total.people.stated.1.,electorate.alldata[RegionOrigin=="Asia"])) -->
+<!-- green.asian.voters.cor<-cor.test(electorate.alldata[RegionOrigin=="Asia"]$Change.Green,electorate.alldata[RegionOrigin=="Asia"]$Total.people.stated.1.) -->
+<!-- green.lm<-lm(Change.Green~Total.people.stated.1.,electorate.alldata[RegionOrigin=="Asia"]) -->
+<!-- #summary(national.lm) -->
+</div>
+<div id="these-patterns-cannot-be-explained-by-electorate-median-income." class="section level3">
+<h3>These patterns cannot be explained by electorate median income.</h3>
+<p>Electorate median income does not explain the pattern we see.</p>
+<p>As we’d expect, electorate median income is certainly a strong predictor of voting for National vs. Labour (r=0.43, p&lt;0.001):</p>
+<p><img src="/post/displayChange_files/figure-html/MedianIncome1-1.png" width="672" /></p>
+<p>However, in a linear model, electorate median income does not explain the correlation between change in Labour vote and number of residents from Asia in an electorate. Furthermore, electorate median income is statistically <em>unrelated</em> to Labour’s change in support from 2014 to 2017, and if anything is actually related to a change <em>against</em> National from 2014 to 2017 (r=0.25, p&lt;0.05). This may be because income became less important than other issues in 2017 compared to 2014.</p>
+<p>That would echo a similar trend in the United States and United Kingdom this decade, where the most salient political issues between the left and the right are on issues like immigration and globalization rather than domestic economic policy. The difference is that in New Zealand, it has been traditionally right-wing parties that have, on the basis of economic liberalism, lined up to be the more favorable to immigration.</p>
+<p><img src="/post/displayChange_files/figure-html/MedainIncome2-1.png" width="672" /></p>
+</div>
+<div id="what-does-this-mean" class="section level3">
+<h3>What does this mean?</h3>
+<p>There’s been speculation that Labour’s immigration policies may have influenced voting in 2017, particularly by influencing people in electorates with high proportions of residents from Asia. The data suggests that in electorates with more people from Asia, the Pacific, or the Middle East and Africa, Labour did not gain nearly as much support as in electorates with relatively few immigrants from those regions.</p>
+<p>This might be relevant when Labour works to frame immigration policy. When voters have themselves immigrated to New Zealand; when their neighbors have; they may have more sympathy for immigrants and question restrictive immigration policies.</p>
+<p>Following through on a campaign promise to reduce immigration by up to 30,000 people every year would be a huge change and the data I presented here could mean that it would harm Labour in the polls three years from now. National has resisted making similar changes, and Bill English actually <a href="https://www.nbr.co.nz/article/labour%E2%80%99s-immigration-policy-%E2%80%9Cattack-international-education%E2%80%9D-pm-says-jw-204056">claimed</a> Labour’s changes would end up having minimal effect on long-term migration, because they mostly target international students, 80% of whom return to their country of origin. Labour had better hope Mr. English is right!</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Here, “number of residents from Asia in an electorate” means the number of people in the electorate on Census night 2013 who reported being born in an Asian country. See <a href="http://www.stats.govt.nz/Census/2013-census/data-tables/electorate-tables.aspx">2013 Census electorate tables</a>.<a href="#fnref1">↩</a></p></li>
+</ol>
+</div>

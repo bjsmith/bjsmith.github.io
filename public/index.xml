@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ben Smith</title>
+    <link>https://bjsmith.github.io/</link>
+    <description>Recent content on Ben Smith</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2022 Ben Smith</copyright>
+    <lastBuildDate>Wed, 04 May 2022 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bjsmith.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://bjsmith.github.io/home/about/</link>
+      <pubDate>Wed, 04 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/home/about/</guid>
+      <description>Biography Ben Smith is Postdoctoral researcher in neuroscience at Prof. Elliot Berkman&amp;rsquo;s Social Affective Neuroscience Lab at the University of Oregon.
+He completed a PhD in the Social Affective Neuroscience of Decision-making laboratory at the University of Southern California, led by Prof. Steve Read. Decision-making is the common thread in Ben&amp;rsquo;s work, and spans areas including the social neuroscience of risky decision-making, computational modeling of the reward and punishment system during decision-making, the abstract-concrete tangibility axis of the prefrontal cortex, and moral and ideological decision-making.</description>
+    </item>
+    
+    <item>
+      <title>Selected Publications</title>
+      <link>https://bjsmith.github.io/home/publications_selected/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/home/publications_selected/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent Publications</title>
+      <link>https://bjsmith.github.io/home/publications/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/home/publications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent &amp; Upcoming Talks</title>
+      <link>https://bjsmith.github.io/home/talks/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/home/talks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent Posts</title>
+      <link>https://bjsmith.github.io/home/posts/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/home/posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://bjsmith.github.io/home/projects/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/home/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Teaching</title>
+      <link>https://bjsmith.github.io/home/teaching/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/home/teaching/</guid>
+      <description> Guest Lecture, August 2017, EDENZ Colleges New Zealand, Diploma in Business (Level 7), Values: Theory and Practice Teaching instructor, University Southern California, 2016:  PSYC201: The Science of Happiness (1 semester 2016) PSYC167: Drugs, Behavior, and Society (1 semester 2016)   Graduate Teaching Assistant, Auckland University:  PSYC108: Individual, Social, and Applied Psychology (2 semesters 2011) PHIL101: Introduction to Logic (1 semester 2010)    </description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://bjsmith.github.io/home/contact/</link>
+      <pubDate>Fri, 20 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/home/contact/</guid>
+      <description>Benjamin Smith
+smithben@usc.edu
++1 (213) 740-7860
+Ben Smith Department of Psychology University of Southern California SGM 501 3620 South McClintock Ave. Los Angeles, CA 90089-1061</description>
+    </item>
+    
+    <item>
+      <title>Component analysis of the 2016 US election</title>
+      <link>https://bjsmith.github.io/post/us_election/</link>
+      <pubDate>Tue, 15 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/post/us_election/</guid>
+      <description>For this analysis, I retried 4271 records of American adults surveyed before and after the 2016 election. I demonstrated separability of the data among several interesting dimensions. Moving forward, we should be able to examine how that separability relates to regional differences in voting patterns.
+I calculated the principle components across all the dataset. Principle components analysis is a common dimension reduction technique intended to reduce the dimensionality of the data by rotating the data across the axes of the data that explain the most variance.</description>
+    </item>
+    
+    <item>
+      <title>A meta-analytical review of brain activity associated with intertemporal decisions: Evidence for an anterior-posterior tangibility axis</title>
+      <link>https://bjsmith.github.io/publication/construalinthepfc/</link>
+      <pubDate>Thu, 01 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/publication/construalinthepfc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Change in votes from 2014 to 2017</title>
+      <link>https://bjsmith.github.io/post/displaychange/</link>
+      <pubDate>Mon, 02 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/post/displaychange/</guid>
+      <description>Labour campaigned on cutting immigration by 20,000 to 30,000 people every year. Labour’s subsequent 10% vote boost across general electorates was tempered by a less enthusiastic boost from electorates with many residents from Asia1, and in those electorates, National actually gained overall. Overall there is currently no significant link between an electorate’s Asian immigrant population and that electorate’s level of support for Labour. But the change from 2014 to 2017 is significant: for every 1,000 residents from Asia in an electorate, National’s vote went up by 0.</description>
+    </item>
+    
+    <item>
+      <title>Demonstrating connections between structure and function through Bayesian modeling</title>
+      <link>https://bjsmith.github.io/project/joint-modeling/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/project/joint-modeling/</guid>
+      <description>I use Bayesian Joint Modeling to describe neural correlates of reward responsiveness, inhibition, and impulsivity and the interactions between them in a sample of 170 men who have sex with men.</description>
+    </item>
+    
+    <item>
+      <title>Relative reliability of Models and variational Bayes</title>
+      <link>https://bjsmith.github.io/post/compare_models/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/post/compare_models/</guid>
+      <description>I am working on using a Bayesian model to estimate parameters for our reward learning data. I’m extending Nate Haines’ Double Update Model for Reversal Learning (Ahn, Haines, and Zhang 2017). Nate modified the version available in his package hBayesDM to work with our dataset, which is a deterministic Reversal Learning task. I have since incrementally extended it to handle two different tasks (reward and punishment learning) and repeated runs.</description>
+    </item>
+    
+    <item>
+      <title>Making a confidence interval ggplot2 `geom`</title>
+      <link>https://bjsmith.github.io/post/geom_hdi_for_ggplot2/</link>
+      <pubDate>Sat, 23 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/post/geom_hdi_for_ggplot2/</guid>
+      <description>For evaluating posteriors in Bayesian analysis it is pretty common to draw a “Highest Density Interval” to indicate the zone of highest (consecutive) density within a distribution, which may be plotted in a scatter plot or a histogram or density plot or similar.
+When working in ggplot, you’ll often add multiple layers to your graph in the form of “geoms”: for instance, a geom_point to show a scatterplot, which you could overlay with geom_abline to draw a trendline through the points.</description>
+    </item>
+    
+    <item>
+      <title>A meta-analytical review of brain activity associated with intertemporal decisions: Evidence for a rostal-caudal tangibility axis</title>
+      <link>https://bjsmith.github.io/project/tangibility-hypothesis/</link>
+      <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/project/tangibility-hypothesis/</guid>
+      <description>With evidence from a meta-analysis, I propose a rostral-caudal tangibility axis that helps to create general processes of psychological distance</description>
+    </item>
+    
+    <item>
+      <title>Cultural context and motivational style distinguish Honour and Face cultures</title>
+      <link>https://bjsmith.github.io/talk/example-talk/</link>
+      <pubDate>Sun, 20 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/talk/example-talk/</guid>
+      <description>#Embed your slides or video here using shortcodes. Further details can easily be added using Markdown and $\rm \LaTeX$ math code.</description>
+    </item>
+    
+    <item>
+      <title>Prefrontal cortical activity during the Stroop task: New insights into the why and the who of real-world risky sexual behavior</title>
+      <link>https://bjsmith.github.io/publication/emily-paper/</link>
+      <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/publication/emily-paper/</guid>
+      <description>Background Research suggests that deficits in both executive functioning and trait impulsivity may play a role in risky sexual behavior. At the neural level, differences in regulation of the prefrontal cortex have been linked to impulsivity, measured neurocognitively and through self- report. The relationship between neurocognitive measures of executive control and trait impulsivity in predicting risky sexual behavior has not been investigated.
+Purpose To investigate the relationship between neural functioning during the Stroop task and risky sexual behavior, as well as the effect of individual differences in urgent (positive and negative) impulsivity on this relationship.</description>
+    </item>
+    
+    <item>
+      <title>Virtually &#39;in the heat of the moment&#39;: Insula activation in safe sex negotiation among risky men.</title>
+      <link>https://bjsmith.github.io/publication/riskysex/</link>
+      <pubDate>Sat, 01 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/publication/riskysex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Distinguishing honor, face, and dignity culture</title>
+      <link>https://bjsmith.github.io/project/honor-values-project/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/project/honor-values-project/</guid>
+      <description>with colleagues Peter Wang and Crystal Wang. We are examining the differences between Honor, Face, and Dignity culture. Leung &amp;amp; Cohen(&lt;a href=&#34;http://ink.library.smu.edu.sg/cgi/viewcontent.cgi?article=2282&amp;amp;context=soss_research&#34;&gt;2011&lt;/a&gt;) characterized these cultures in detail. We believe that systematic individual differences in personality can distinguish honor and face cultures, which, though distinct, have historically been difficult to characterize separately.</description>
+    </item>
+    
+    <item>
+      <title>Virtual Personalities: Using computational modeling to understand within-person variability</title>
+      <link>https://bjsmith.github.io/publication/virtualpersonality/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/publication/virtualpersonality/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
