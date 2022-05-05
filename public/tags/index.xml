@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Ben Smith</title>
+    <link>https://bjsmith.github.io/tags/</link>
+    <description>Recent content in Tags on Ben Smith</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2022 Ben Smith</copyright>
+<<<<<<< HEAD:tags/index.xml
+    <lastBuildDate>Mon, 25 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://bjsmith.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>bayesian hierarchical modeling</title>
+      <link>https://bjsmith.github.io/tags/bayesian-hierarchical-modeling/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/tags/bayesian-hierarchical-modeling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reversal-learning</title>
+      <link>https://bjsmith.github.io/tags/reversal-learning/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/tags/reversal-learning/</guid>
+=======
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Content tagged as &#39;Academic&#39;</title>
+      <link>https://bjsmith.github.io/tags/academic/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/tags/academic/</guid>
+      <description>&lt;p&gt;Here is a list of all the content that has been tagged as &lt;em&gt;academic&lt;/em&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bayesian Hierarchical Modeling</title>
+      <link>https://bjsmith.github.io/tags/bayesian-hierarchical-modeling/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/tags/bayesian-hierarchical-modeling/</guid>
+>>>>>>> 6b058ed0b1c3276a6089ddbda3d31af3044255b5:public/tags/index.xml
+      <description></description>
+    </item>
+    
+    <item>
+<<<<<<< HEAD:tags/index.xml
+      <title>stan</title>
+      <link>https://bjsmith.github.io/tags/stan/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/tags/stan/</guid>
+=======
+      <title>Cross Cultural Research</title>
+      <link>https://bjsmith.github.io/tags/cross-cultural-research/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/tags/cross-cultural-research/</guid>
+>>>>>>> 6b058ed0b1c3276a6089ddbda3d31af3044255b5:public/tags/index.xml
+      <description></description>
+    </item>
+    
+    <item>
+<<<<<<< HEAD:tags/index.xml
+      <title>neural-structure</title>
+      <link>https://bjsmith.github.io/tags/neural-structure/</link>
+      <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/tags/neural-structure/</guid>
+=======
+      <title>Culture</title>
+      <link>https://bjsmith.github.io/tags/culture/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/tags/culture/</guid>
+>>>>>>> 6b058ed0b1c3276a6089ddbda3d31af3044255b5:public/tags/index.xml
+      <description></description>
+    </item>
+    
+    <item>
+<<<<<<< HEAD:tags/index.xml
+      <title>prefrontal-cortex</title>
+      <link>https://bjsmith.github.io/tags/prefrontal-cortex/</link>
+      <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/tags/prefrontal-cortex/</guid>
+=======
+      <title>Honor Culture</title>
+      <link>https://bjsmith.github.io/tags/honor-culture/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/tags/honor-culture/</guid>
+>>>>>>> 6b058ed0b1c3276a6089ddbda3d31af3044255b5:public/tags/index.xml
+      <description></description>
+    </item>
+    
+    <item>
+<<<<<<< HEAD:tags/index.xml
+      <title>Content tagged as &#39;Academic&#39;</title>
+      <link>https://bjsmith.github.io/tags/academic/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/tags/academic/</guid>
+      <description>Here is a list of all the content that has been tagged as academic.</description>
+    </item>
+    
+    <item>
+      <title>cross-cultural research</title>
+      <link>https://bjsmith.github.io/tags/cross-cultural-research/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/tags/cross-cultural-research/</guid>
+=======
+      <title>Morality</title>
+      <link>https://bjsmith.github.io/tags/morality/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/tags/morality/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Neural Structure</title>
+      <link>https://bjsmith.github.io/tags/neural-structure/</link>
+      <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/tags/neural-structure/</guid>
+>>>>>>> 6b058ed0b1c3276a6089ddbda3d31af3044255b5:public/tags/index.xml
+      <description></description>
+    </item>
+    
+    <item>
+<<<<<<< HEAD:tags/index.xml
+      <title>culture</title>
+      <link>https://bjsmith.github.io/tags/culture/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/tags/culture/</guid>
+=======
+      <title>Personality</title>
+      <link>https://bjsmith.github.io/tags/personality/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/tags/personality/</guid>
+>>>>>>> 6b058ed0b1c3276a6089ddbda3d31af3044255b5:public/tags/index.xml
+      <description></description>
+    </item>
+    
+    <item>
+<<<<<<< HEAD:tags/index.xml
+      <title>honor culture</title>
+      <link>https://bjsmith.github.io/tags/honor-culture/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/tags/honor-culture/</guid>
+=======
+      <title>Prefrontal Cortex</title>
+      <link>https://bjsmith.github.io/tags/prefrontal-cortex/</link>
+      <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/tags/prefrontal-cortex/</guid>
+>>>>>>> 6b058ed0b1c3276a6089ddbda3d31af3044255b5:public/tags/index.xml
+      <description></description>
+    </item>
+    
+    <item>
+<<<<<<< HEAD:tags/index.xml
+      <title>morality</title>
+      <link>https://bjsmith.github.io/tags/morality/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/tags/morality/</guid>
+=======
+      <title>Reversal Learning</title>
+      <link>https://bjsmith.github.io/tags/reversal-learning/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/tags/reversal-learning/</guid>
+>>>>>>> 6b058ed0b1c3276a6089ddbda3d31af3044255b5:public/tags/index.xml
+      <description></description>
+    </item>
+    
+    <item>
+<<<<<<< HEAD:tags/index.xml
+      <title>personality</title>
+      <link>https://bjsmith.github.io/tags/personality/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/tags/personality/</guid>
+=======
+      <title>Stan</title>
+      <link>https://bjsmith.github.io/tags/stan/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/tags/stan/</guid>
+>>>>>>> 6b058ed0b1c3276a6089ddbda3d31af3044255b5:public/tags/index.xml
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

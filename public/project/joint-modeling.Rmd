@@ -1,0 +1,106 @@
+---
+title: "Demonstrating connections between structure and function through Bayesian modeling"
+summary: "I use Bayesian Joint Modeling to describe neural correlates of reward responsiveness, inhibition, and impulsivity and the interactions between them in a sample of 170 men who have sex with men."
+author: ''
+date: '2017-09-25'
+tags:
+  - bayesian-hierarchical-modeling
+  - stan
+  - reversal-learning
+draft: no
+math: yes
+bibliography: /Users/benjaminsmith/GDrive/website/www/fullbib.bib
+image_preview: "headers/reversal-learning.png"
+output: 
+  html_document
+---
+
+I use Bayesian Joint Modeling [@turner_bayesian_2013, @turner_why_2016] to describe neural correlates of reward responsiveness, inhibition, and impulsivity and the interactions between them in a sample of 170 men who have sex with men (MSM). Bayesian Joint Modeling is a statistical framework developed by BM Turner and colleagues for combining models of multiple information sources to better estimate the suitability of models for each source. 
+
+I use Bayesian joint modeling to provide novel insight in both methodological and psychological fields, and to use the method in novel ways by applying it to structural imaging and perhaps even functional imaging.
+
+
+Colleagues formerly and currently at the Social Affective Neuroscience of Decision-making Lab at the University of Southern California, including [Steve Read](https://dornsife.usc.edu/cf/faculty-and-staff/faculty.cfm?pid=1003627), [Vita Droutman](https://www.researchgate.net/profile/Vita_Droutman), [Feng Xue](http://xfsl.fmri.cn/about), and [Emily Barkley-Levenson](http://www.hofstra.edu/faculty/fac_profiles.cfm?id=5459) have collected structural and task-related behavioral and fMRI data from around 170 men who have sex with men.
+
+The tasks recorded are a Go/NoGo task, deterministic reversal learning tasks (one each of reward-based and punishment-based), a Stroop task, and a cups gambling task. I examine the Go/NoGo and deterministic reversal learning tasks in detail, and if time permits, will also examine the Stroop task. If it is feasible, I will also examine interactions between the each of the tasks, including the cups gambling tasks, and between the tasks and structural data.
+
+# Work so far
+
+ * [Testing stan-based models in R](/post/compare_models/)
+ * Recent work with [Nate Haines](http://haines-lab.com/)
+ * Behavioral analysis
+ 
+# Behavioral analysis
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = '/Users/benjaminsmith/GDrive/joint-modeling/reversal-learning/behavioral-analysis/reversallearning/')
+```
+
+```{r setup2, include=FALSE}
+source("/Users/benjaminsmith/GDrive/joint-modeling/reversal-learning/behavioral-analysis/reversallearning/display_setup.R")
+
+```
+
+Our reversal learning data contains data about a fairly large number of subjects.
+
+Here you can see their behavior over the 8-13 trials of the task.
+```{r plotlydemo, echo=FALSE, message=FALSE, warning=FALSE}
+library(plotly)
+
+main.prop.cor.ggplot<-
+  ggplot(accuracy.by.pres_seg.subid[!is.na(presentation_n_over_segments)],
+       aes(x=presentation_n_over_segments,y=prop.correct,group=subid))+
+  geom_line(aes(colour=final.prop.correct),size=1.5,alpha=0.3)+ scale_colour_gradientn(colours=c("red","green","blue","violet"))+
+  #scale_x_continuous(breaks=-8:4,labels=break.labels)+
+  labs(#x="Presentation",
+    y="Proportion correct across all images by user",
+    title=paste0("proportion correct across all images by user\n from start to finish of reversal learning"))+
+  geom_smooth(group=1,color="black",span=1)+
+  #geom_line(data=accuracy.by.pres_seg.subid.summary,aes(x=presentation_n_over_segments,y=prop.correct.m,group=NULL))+
+  geom_vline(aes(xintercept=8),linetype=2)+geom_vline(aes(xintercept=13),linetype=2)+
+      
+  
+  #theme(strip.text.y=element_text(colour="orange"))+
+  reversal_learning_timeline_ggplot_commands+
+  geom_hline(data=accuracy.by.pres_seg.subid.summary[presentation_n_over_segments==5],
+             aes(yintercept = prop.correct.m),
+             linetype=2)+
+  geom_hline(data=accuracy.by.pres_seg.subid.summary[presentation_n_over_segments==13],
+             aes(yintercept = prop.correct.m),
+             linetype=2)+
+  facet_grid(Motivation ~ .)
+
+ggplotly(main.prop.cor.ggplot)
+```
+
+Here our subjects are grouped according to their experimental group. Strong between-group differences are not immediatley apparent from the graph.
+```{r plotlydemo_group, echo=FALSE, message=FALSE, warning=FALSE}
+library(plotly)
+
+main.prop.cor.ggplot<-
+  ggplot(accuracy.by.pres_seg.subid[!is.na(presentation_n_over_segments) & RiskLabel!="Safe Meth"],
+       aes(x=presentation_n_over_segments,y=prop.correct,group=subid))+
+  geom_line(aes(colour=RiskLabel),size=0.5,alpha=0.9)+
+  #scale_x_continuous(breaks=-8:4,labels=break.labels)+
+  labs(#x="Presentation",
+    y="Proportion correct across all images by user",
+    title=paste0("proportion correct across all images by user"))+
+  geom_smooth(group=1,color="black",span=0.1)+
+  #geom_line(data=accuracy.by.pres_seg.subid.summary,aes(x=presentation_n_over_segments,y=prop.correct.m,group=NULL))+
+      facet_grid(RiskLabel ~ Motivation)+
+  geom_vline(aes(xintercept=8),linetype=2)+geom_vline(aes(xintercept=13),linetype=2)+
+  #theme(strip.text.y=element_text(colour="orange"))+
+  reversal_learning_timeline_ggplot_commands+
+  geom_hline(data=accuracy.by.pres_seg.subid.summary[presentation_n_over_segments==5],
+             aes(yintercept = prop.correct.m),
+             linetype=2)+
+  geom_hline(data=accuracy.by.pres_seg.subid.summary[presentation_n_over_segments==13],
+             aes(yintercept = prop.correct.m),
+             linetype=2)
+
+ggplotly(main.prop.cor.ggplot)
+```
+
+
+# References

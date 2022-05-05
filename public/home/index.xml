@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homes on Ben Smith</title>
+    <link>https://bjsmith.github.io/home/</link>
+    <description>Recent content in Homes on Ben Smith</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2022 Ben Smith</copyright>
+    <lastBuildDate>Wed, 04 May 2022 00:00:00 +0000</lastBuildDate>
+<<<<<<< HEAD:home/index.xml
+    
+	<atom:link href="https://bjsmith.github.io/home/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://bjsmith.github.io/home/about/</link>
+      <pubDate>Wed, 04 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/home/about/</guid>
+      <description>Biography Ben Smith is Postdoctoral researcher in neuroscience at Prof. Elliot Berkman&amp;rsquo;s Social Affective Neuroscience Lab at the University of Oregon.
+He completed a PhD in the Social Affective Neuroscience of Decision-making laboratory at the University of Southern California, led by Prof. Steve Read. Decision-making is the common thread in Ben&amp;rsquo;s work, and spans areas including the social neuroscience of risky decision-making, computational modeling of the reward and punishment system during decision-making, the abstract-concrete tangibility axis of the prefrontal cortex, and moral and ideological decision-making.</description>
+    </item>
+    
+    <item>
+      <title>Selected Publications</title>
+      <link>https://bjsmith.github.io/home/publications_selected/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/home/publications_selected/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent Publications</title>
+      <link>https://bjsmith.github.io/home/publications/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/home/publications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent &amp; Upcoming Talks</title>
+      <link>https://bjsmith.github.io/home/talks/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/home/talks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent Posts</title>
+      <link>https://bjsmith.github.io/home/posts/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/home/posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://bjsmith.github.io/home/projects/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/home/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Teaching</title>
+      <link>https://bjsmith.github.io/home/teaching/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/home/teaching/</guid>
+      <description> Guest Lecture, August 2017, EDENZ Colleges New Zealand, Diploma in Business (Level 7), Values: Theory and Practice Teaching instructor, University Southern California, 2016:  PSYC201: The Science of Happiness (1 semester 2016) PSYC167: Drugs, Behavior, and Society (1 semester 2016)   Graduate Teaching Assistant, Auckland University:  PSYC108: Individual, Social, and Applied Psychology (2 semesters 2011) PHIL101: Introduction to Logic (1 semester 2010)    </description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://bjsmith.github.io/home/contact/</link>
+      <pubDate>Fri, 20 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bjsmith.github.io/home/contact/</guid>
+      <description>Benjamin Smith
+smithben@usc.edu
++1 (213) 740-7860
+Ben Smith Department of Psychology University of Southern California SGM 501 3620 South McClintock Ave. Los Angeles, CA 90089-1061</description>
+    </item>
+=======
+    <atom:link href="/home/" rel="self" type="application/rss+xml" />
+>>>>>>> 6b058ed0b1c3276a6089ddbda3d31af3044255b5:public/home/index.xml
+    
+  </channel>
+</rss>

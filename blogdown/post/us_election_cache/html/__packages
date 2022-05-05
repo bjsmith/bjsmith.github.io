@@ -1,0 +1,15 @@
+base
+methods
+datasets
+utils
+grDevices
+graphics
+stats
+data.table
+dplyr
+ggplot2
+fiftystater
+usmap
+maps
+mapdata
+plotly
