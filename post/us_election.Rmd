@@ -1,0 +1,544 @@
+---
+title: "Component analysis of the 2016 US election"
+author: "Ben Smith"
+date: "2018-05-15"
+output: 
+  html_document: 
+    self_contained: no
+---
+
+```{r, setup1, echo=FALSE}
+knitr::opts_knit$set(root.dir = '/Users/benjaminsmith/Google Drive/Job Search 2018/Data-incubator-test/code/')
+knitr::opts_chunk$set(warning=FALSE, echo=FALSE, message=FALSE)
+
+```
+
+
+```{r, setup2, warning=FALSE}
+
+library(data.table)
+library(dplyr)
+library(ggplot2)
+library(fiftystater)
+
+library(usmap)
+
+library(maps)
+library(mapdata)
+library(plotly)
+
+```
+For this analysis, I retried 4271 records of American adults surveyed before and after the 2016 election. I demonstrated separability of the data among several interesting dimensions. Moving forward, we should be able to examine how that separability relates to regional differences in voting patterns.
+
+
+```{r, include=FALSE}
+
+
+anesdata.raw <- read.csv("anes/anes_timeseries_2016/anes_timeseries_2016_rawdata.txt", sep="|")
+#colnames(anesdata.raw)
+
+
+#anes.labels<-read.csv(
+#  "anes/anes_timeseries_2016/anes_timeseries_2016_spss/anes_timeseries_2016_varlabels_modified.sps",sep=" ")
+anes.labels.inc<-read.csv("anes/anes_timeseries_2016/anes_labels.csv")
+#write.csv(anes.labels,"anes/anes_timeseries_2016/anes_labels.csv")
+anes.labels.inc$LABELS[which(grepl("county",anes.labels.inc$LABELS,ignore.case = TRUE))]
+#now, we want to include items related to attitudes and opinions but not party affiliations and codes
+#In order to do this we will also need location/county data so need to find out how to get that.
+
+#table(anesdata.raw$V161010f,anesdata.raw$V161010d)
+
+anesdata.raw.colnames<-colnames(anesdata.raw)
+#we have the district-level voting data.
+rownames(anes.labels.inc)<-anes.labels.inc$VARIABLE
+#table(anes.labels.inc$VARIABLE)
+anes.labels.tolabel<-anes.labels.inc[anesdata.raw.colnames,]
+
+#so next thing: how do we data-reduce?
+anesdata.selected<-anesdata.raw[,which(anes.labels.tolabel$AttitudesBeliefInclude==1)]
+#exclude cols with less than 4 options - not enough tdata.
+unique_vals<-apply(anesdata.selected,2,function(c){length(unique(c))})
+anesdata.selected<-anesdata.selected[,unique_vals>=4]
+
+
+
+anes.prcomp<-prcomp(anesdata.selected,center=TRUE,scale. = TRUE)
+#let's keep everything with SD of 2 or more.
+#plot(anes.prcomp,type="l")
+#summary(anes.prcomp)
+comps.to.keep<-anes.prcomp$sdev>=2
+#dim(anes.prcomp$rotation)
+rotate.mat<-anes.prcomp$rotation[,comps.to.keep]
+rotate.mat.all<-anes.prcomp$rotation
+#get the value of each component by subject
+rd.ds<-anes.prcomp$x[,comps.to.keep]
+#now we have to multiply
+#plot(rd.ds[,1],rd.ds[,2])
+
+
+```
+
+
+
+I calculated the principle components across all the dataset. Principle components analysis is a common dimension reduction technique intended to reduce the dimensionality of the data by rotating the data across the axes of the data that explain the most variance.
+
+
+After finding the principle components, rather than selecting the components that explained the absolute most variance in the dataset, I selected components that were most predictive of the respondents' voting records. To simplify the analysis, I selected only people who had voted and who had voted for either Hillary Clinton or Donald Trump.
+
+```{r, include=FALSE,cache=TRUE}
+
+
+#now get the top 10 question positive loadings for each PC
+presvote.code<-colnames(anesdata.raw)[which(anes.labels.tolabel$VoteInclude==1)]
+anesdata.extraInfo<-anesdata.raw[,c(presvote.code,"V163001a","V163002")]
+colnames(anesdata.extraInfo)<-c("PresidentVote","FIPSState","FIPSDistrict")
+
+pca.affiliation.combined<-data.frame(cbind(rd.ds,anesdata.extraInfo))
+pca.affiliation.combined$PresidentVote<-factor(pca.affiliation.combined$PresidentVote,
+                                               levels=c(6,7,8,9,5,4,3),
+                                               labels=c("Clinton","Trump","Johnson","Stein","(Inapplicable)","(NoInterview)","(NoPostData)"))
+
+```
+
+```{r}
+
+pc.complete<-anes.prcomp$x
+
+AllPCs<-data.frame(cbind(pc.complete,anesdata.extraInfo))#<-data.frame(cbind(pc.complete,"PresidentVote"=as.factor(anesdata.affiliationinfo)))
+AllPCs$PresidentVote<-factor(AllPCs$PresidentVote,
+levels=c(1,2,3,4,-1,-6,-7),
+labels=c("Clinton","Trump","Johnson","Stein","(Inapplicable)","(NoInterview)","(NoPostData)"))
+#table(AllPCs$PresidentVote)
+AllPCs.ClintonTrump<-AllPCs[AllPCs$PresidentVote %in% c("Clinton","Trump"),]
+
+AllPCs.ClintonTrump$PresidentVote<-as.character(AllPCs.ClintonTrump$PresidentVote)
+AllPCs.ClintonTrump$PresidentVote<-factor(AllPCs.ClintonTrump$PresidentVote,levels=c("Trump","Clinton"))
+table(AllPCs.ClintonTrump$PresidentVote)
+#which PCs most strongly support voting for Trump?
+pc.predictVote<-NULL
+
+for (pc in 1:550){
+  tres<-t.test(AllPCs.ClintonTrump[,pc]~AllPCs.ClintonTrump$PresidentVote)
+  tresdf<-data.frame(tres$statistic,tres$conf.int[1],tres$conf.int[2],tres$p.value)
+  
+  if(is.null(pc.predictVote)){
+    pc.predictVote<-tresdf
+  }else{
+    pc.predictVote<-rbind(pc.predictVote,tresdf)
+  }
+
+}
+pc.predictVote.dt<-data.table(pc.predictVote)
+pc.predictVote.dt$PC<-1:nrow(pc.predictVote.dt)
+best.predicting.pcs<-pc.predictVote.dt[order(-abs(tres.statistic)),] %>% .[1:10,PC]
+
+pcs_to_choose<-10
+PCLabelsBestPredictors<-data.frame(Id=1:pcs_to_choose)
+for(i in 1:length(best.predicting.pcs)){
+pc<-best.predicting.pcs[i]
+PCLabelsBestPredictors[,i]<-
+gsub("PRE FTF CASI/WEB: Mention: ","",
+gsub("PRE FTF CASI/WEB: Mention: ","",
+gsub("PRE: ","",anes.labels.tolabel[anes.labels.tolabel$VARIABLE %in% names(sort(rotate.mat.all[,pc],decreasing=TRUE)[1:10]),"LABELS"])))
+
+}
+
+
+
+colnames(PCLabelsBestPredictors)<-paste0("PC",best.predicting.pcs)
+PCLabelsBestPredictorsText<-data.frame(apply(PCLabelsBestPredictors,1,function(pccol){paste0(pccol,collapse="; ")}))
+rownames(PCLabelsBestPredictorsText)<-paste0("PC",best.predicting.pcs)
+colnames(PCLabelsBestPredictorsText)<-"Principle Component Question Text Sample"
+
+
+```
+
+The graph shows the distribution of respondents' ten most predictive principle components. Some components, on their own, very clearly separate the voters for each candidate..
+
+```{r, echo=FALSE}
+
+bestpcs.graph<-tidyr::gather(AllPCs.ClintonTrump,"PC","Value",which(colnames(AllPCs.ClintonTrump) %in% colnames(PCLabelsBestPredictors)))
+ggplot(bestpcs.graph,aes(x=PC,y=Value,color=PresidentVote,group=interaction(PresidentVote,PC)))+
+  geom_boxplot(alpha=0)+
+  geom_jitter(width=0.2,alpha=0.1)+
+  coord_cartesian(ylim=c(-15,15))+labs(title="Distribution of Values on most predictive Principal Components",
+                                       y="Principal Component Value")
+
+```
+
+
+```{r, echo=FALSE}
+as.formula(paste0("(PresidentVote==\"Trump\")~",paste0("PC",best.predicting.pcs,collapse=" + ")))
+pcpredict<-glm(as.formula(paste0("(PresidentVote==\"Trump\")~",paste0("PC",best.predicting.pcs,collapse=" + ")))
+               ,AllPCs.ClintonTrump,family = binomial(link="logit"))
+#summary(pcpredict)
+lm.beta::lm.beta(pcpredict)
+max.three<-sort(-abs(lm.beta::lm.beta(pcpredict)[[1]][2:(pcs_to_choose+1)]))
+
+
+#weight to actual eelction results.
+election_results<-data.table(read.csv("anes/actual-election-results.csv",stringsAsFactors = FALSE))
+election_results$TrumpProportionFullElection<-election_results$Donald.Trump/(election_results$Donald.Trump+election_results$Hillary.Clinton)
+#table(election_results$X)
+election_results[X=="Maine\xa0(at-lg)",X:="Maine"]
+
+AllPCs.ClintonTrump.Matched<-data.table(merge(AllPCs.ClintonTrump,read.csv("anes/fips_states.csv"),by.x="FIPSState",by.y="FIPS.Code",all.x=TRUE))
+CT.Tally<- AllPCs.ClintonTrump.Matched%>% 
+  .[,.(VoteCount=.N),by=c("State.or.District","PresidentVote")] %>% tidyr::spread(PresidentVote,VoteCount)
+CT.Tally[is.na(Clinton),Clinton:=0]
+CT.Tally[is.na(Trump),Trump:=0]
+CT.Tally$TrumpSampleProportion<-CT.Tally$Trump/(CT.Tally$Trump+CT.Tally$Clinton)
+CT.Tally.compare<-merge(CT.Tally,election_results,by.x="State.or.District",by.y="X")
+CT.Tally.compare$TrumpSampleProportionExtra<-CT.Tally.compare$TrumpSampleProportion-CT.Tally.compare$TrumpProportionFullElection
+# CT.Tally.compare$SampleSize<-CT.Tally.compare$Trump+CT.Tally.compare$Clinton
+# CT.Tally.compare$ExpectedTrumpVotes<-CT.Tally.compare$TrumpProportionFullElection*CT.Tally.compare$SampleSize
+# CT.Tally.compare$SurplusTrumpVotes<-CT.Tally.compare$Trump-CT.Tally.compare$ExpectedTrumpVotes
+#now we have the tallies, we can go back to the AllPCs.ClintonTrump, and randomly select subjects from the right side to add for each state
+set.seed(4879896)
+for (s in unique(AllPCs.ClintonTrump.Matched$State.or.District)){
+  #s<-"Kentucky"
+  #s<-"Alabama"
+  #
+  #for each state,
+  trump_sample_proportion_extra<-CT.Tally.compare[State.or.District==s,TrumpSampleProportionExtra]
+  trump_prop<-CT.Tally.compare[State.or.District==s,TrumpProportionFullElection]
+  if(trump_sample_proportion_extra>0){#add hillary votes; how many do we add?
+    clinton.votes.needed<-((1-trump_prop)*CT.Tally.compare[State.or.District==s,Trump])/trump_prop
+    clinton.votes.to.add<-floor(clinton.votes.needed-CT.Tally.compare[State.or.District==s,Clinton])
+    #now sample.
+    to.sample<-sample(1:CT.Tally.compare[State.or.District==s,Clinton],clinton.votes.to.add,replace = TRUE)
+    AllPCs.ClintonTrump.Matched<-rbind(
+      AllPCs.ClintonTrump.Matched,
+      AllPCs.ClintonTrump.Matched[State.or.District==s & PresidentVote=="Clinton",] %>% .[to.sample])
+  }else{
+    trump.votes.needed<-trump_prop*CT.Tally.compare[State.or.District==s,Clinton]/(1-trump_prop)
+    trump.votes.to.add<-floor(trump.votes.needed-CT.Tally.compare[State.or.District==s,Trump])
+    
+    to.sample<-sample(1:CT.Tally.compare[State.or.District==s,Trump],trump.votes.to.add,replace = TRUE)
+    AllPCs.ClintonTrump.Matched<-rbind(
+      AllPCs.ClintonTrump.Matched,
+      AllPCs.ClintonTrump.Matched[State.or.District==s & PresidentVote=="Trump",] %>% .[to.sample])
+  }
+  
+}
+```
+
+Although this is a binomial prediction, I used a linear model below to easily find an $R^2$ value for predicting voting from these principle components, $R^2$ across all represents explaining 74% of the variance from the model.
+
+```{r, echo=FALSE}
+
+#now we need to map congressional districts to counties.
+districts_to_counties<-read.csv("anes/natl_cocd_delim.txt")
+
+colnames(districts_to_counties)<-paste0("FIPS",colnames(districts_to_counties))
+#cor.test(anesdata.raw$V163002,anesdata.raw$V161010f)# these are both identical, that makes this a bit easier.
+#table(anesdata.raw$V163001a)
+#for mapped data, we'll have to do with duplicated values because want to assign the same thing to each county within the district.
+
+
+
+#think we messed this up last time! We can clearly improve :-)
+AllPCs.voteByState<-AllPCs.ClintonTrump.Matched[,.(VoteCount=.N
+),by=c("State.or.District","PresidentVote")] %>% tidyr::spread(PresidentVote,VoteCount)
+
+
+#bias the votes in favor of being in the middle
+#This is a crude "bayesian prior" toward state means being similar to national means
+#so that states with very small vote counts won't show up as highly skewed toward one side of the other
+#MAYBE WE SHOULD APPLY THE SAME METHOD TO THE PCS AT LEAST WHEN DISPLAYING THEM?
+AllPCs.voteByState[is.na(Trump)==TRUE,Trump:=0]
+AllPCs.voteByState[is.na(Clinton)==TRUE,Clinton:=0]
+VotePropTrump<-sum(AllPCs.ClintonTrump$PresidentVote=="Trump")/(
+  sum(AllPCs.ClintonTrump$PresidentVote=="Clinton")+sum(AllPCs.ClintonTrump$PresidentVote=="Trump")
+)
+AllPCs.voteByState$TrumpWeaklyInformativeP<-AllPCs.voteByState$Trump+VotePropTrump*10
+AllPCs.voteByState$ClintonWeaklyInformativeP<-AllPCs.voteByState$Clinton+(1-VotePropTrump)*10
+
+AllPCs.voteByState$ProportionTrump<-
+  AllPCs.voteByState$TrumpWeaklyInformativeP/(AllPCs.voteByState$TrumpWeaklyInformativeP+AllPCs.voteByState$ClintonWeaklyInformativeP)
+
+
+AllPCs.CT.matched.PCMeans<-
+  AllPCs.ClintonTrump.Matched[,.(PC4Mean=mean(PC4),
+                       PC5Mean=mean(PC5),
+                       PC6Mean=mean(PC6),
+                       PC8Mean=mean(PC8)
+  ),by=c("State.or.District")]
+
+PcMeans.voteByState<-merge(AllPCs.voteByState,AllPCs.CT.matched.PCMeans,by="State.or.District")
+PcMeans.voteByState$State.or.District<-tolower(PcMeans.voteByState$State.or.District)
+# cor.test(PcMeans.voteByState$ProportionTrump,PcMeans.voteByState$PC4Mean)
+# cor.test(PcMeans.voteByState$ProportionTrump,PcMeans.voteByState$PC5Mean)
+# cor.test(PcMeans.voteByState$ProportionTrump,PcMeans.voteByState$PC6Mean)
+# cor.test(PcMeans.voteByState$ProportionTrump,PcMeans.voteByState$PC8Mean)
+
+PcMeansWide<-tidyr::gather(PcMeans.voteByState,PC4Mean,PC5Mean,PC6Mean,PC8Mean,key = "PC",value = "State Average PC Loading")
+setnames(PcMeansWide,"State.or.District","state")
+
+#setnames(AllPCs.CT.matched.voteByState,"state","fips")
+states <- map_data("state")
+setnames(states,"order","polyorder")
+
+#View(AllPCs.CT.matched.voteByState)
+states_data<-data.table(merge(states,PcMeansWide,by.x="region",by.y="state",all.x=TRUE))
+states_data<-states_data[order(polyorder),]
+
+ditch_the_axes <- theme(
+  axis.text = element_blank(),
+  axis.line = element_blank(),
+  axis.ticks = element_blank(),
+  panel.border = element_blank(),
+  panel.grid = element_blank(),
+  axis.title = element_blank()
+)
+usa_theme <- theme(strip.text=element_text(size=20),
+                   legend.position = c(0.8,0.2),
+                   legend.key.size = unit(2,"lines"),
+                   legend.title = element_text(size=20),
+                   legend.text = element_text(size=25))
+
+```
+We can then move forward to examine the data in a nationwide map. 
+
+```{r, echo=FALSE}
+#but for now let's move on.
+usregions<-read.csv("anes/us census bureau regions and divisions.csv")
+AllPCs.ClintonTrump.Matched<-merge(AllPCs.ClintonTrump.Matched,usregions,by.x="State.or.District",by.y="State")
+#What happens if we now apply a regional map?
+AllPCs.voteByRegion<-AllPCs.ClintonTrump.Matched[,.(VoteCount=.N
+),by=c("Region","PresidentVote")] %>% tidyr::spread(PresidentVote,VoteCount)
+
+
+AllPCs.voteByRegion[is.na(Trump)==TRUE,Trump:=0]
+AllPCs.voteByRegion[is.na(Clinton)==TRUE,Clinton:=0]
+AllPCs.voteByRegion$TrumpWeaklyInformativeP<-AllPCs.voteByRegion$Trump+VotePropTrump*10
+AllPCs.voteByRegion$ClintonWeaklyInformativeP<-AllPCs.voteByRegion$Clinton+(1-VotePropTrump)*10
+
+AllPCs.voteByRegion$ProportionTrump<-
+  AllPCs.voteByRegion$TrumpWeaklyInformativeP/(AllPCs.voteByRegion$TrumpWeaklyInformativeP+AllPCs.voteByRegion$ClintonWeaklyInformativeP)
+
+
+AllPCs.CT.matched.PCMeans.ByRegion<-
+  AllPCs.ClintonTrump.Matched[,.(PC4Mean=mean(PC4),
+                       PC5Mean=mean(PC5),
+                       PC6Mean=mean(PC6),
+                       PC8Mean=mean(PC8)
+  ),by=c("Region")]
+
+PcMeans.voteByRegion<-merge(AllPCs.voteByRegion,AllPCs.CT.matched.PCMeans.ByRegion,by="Region") %>%
+  merge(.,usregions)
+
+PcMeans.voteByRegionWide<-tidyr::gather(PcMeans.voteByRegion,PC4Mean,PC5Mean,PC6Mean,PC8Mean,key = "PC",value = "Region Average PC Loading")
+# this is the easy way to do it. because we're working with a state-by-state map
+# we need to remerge with states in order to show.
+PcMeans.voteByRegionWide$State<-tolower(PcMeans.voteByRegionWide$State)
+setnames(PcMeans.voteByRegionWide,"State","state")
+#table(states$region)
+setnames(states,"region","state")
+
+states_data<-data.table(merge(PcMeans.voteByRegionWide,states,by="state",all.y=TRUE))
+states_data<-states_data[order(polyorder),]
+
+
+
+get_labs_for_pc<-function(pc_name){
+  #let's get labels AND proportions
+  #first proportions #pc_name<-"PC4"
+  top.proportions<-sort(abs(rotate.mat.all[,pc_name]/sum(abs(rotate.mat.all[,pc_name]))),decreasing=TRUE)[1:30]
+  top.proportion.names<-names(top.proportions)
+  top.props.with.names<-data.frame(Varcode=top.proportion.names,Proportion=top.proportions,
+                                   RawPCMapping=rotate.mat.all[top.proportion.names,pc_name])
+  
+  #we also need the valence!
+  #and now the labels associated with that.
+  questions.to.grab<-as.character(anes.labels.tolabel[as.character(top.props.with.names$Varcode),"LABELS"])
+  questions.to.grab.clean<-trimws(
+    gsub("PRE FTF CASI/WEB: Mention: ","",
+         gsub("PRE FTF CASI/WEB: Mention: ","",
+              gsub("PRE: ","",
+                   gsub("Approve or disapprove ","",
+                        gsub("Approval/disapproval ","",
+                             gsub("PRE: ","",
+                                  gsub("SUMMARY - ","",questions.to.grab))))))))
+  top.props.with.names$CleanText<-questions.to.grab.clean
+  #not ideal. the square root sum of squares is a kind of compromise which allows duplicated items to count for more than 
+  #the mean of individual entries but less than the sum of them.
+  top.props.with.names.summary<-data.table(top.props.with.names)[,.(Proportion=sqrt(sum(Proportion^2)),RawPCMapping=mean(RawPCMapping)),by="CleanText"] %>%
+    .[order(-Proportion)]
+  #so we can get the top x
+  return(top.props.with.names.summary)
+  
+}
+```
+
+
+```{r, echo=FALSE}
+dat_text<-data.frame(PC=c("PC4Mean","PC5Mean","PC6Mean","PC8Mean"),
+                     pctext=c(paste(get_labs_for_pc("PC4")$CleanText[1:10],collapse="\n"),
+                              paste(get_labs_for_pc("PC5")$CleanText[1:10],collapse="\n"),
+                              paste(get_labs_for_pc("PC6")$CleanText[1:10],collapse="\n"),
+                              paste(get_labs_for_pc("PC8")$CleanText[1:10],collapse="\n")
+                              )
+                     )
+
+
+
+#OK, the visualization is nice. I think we need to work on cutting out questions about the president's performance.
+```
+
+
+What if we do a regional distribution?
+
+
+```{r, echo=FALSE}
+#################### Second regional divisions.
+usa_theme2 <- theme(
+  text=element_text(face="bold"),
+  strip.text=element_text(size=20),
+                   legend.position = "bottom",
+                   legend.key.size = unit(1.3,"lines"),
+                   legend.title = element_text(size=10,face = "bold"),
+                   legend.text = element_text(size=10,face = "bold"),
+                   legend.direction = "horizontal",
+                  legend.key.width = unit(2,"lines")
+                   )
+
+
+#What happens if we now apply a regional map?
+AllPCs.voteByDivision<-AllPCs.ClintonTrump.Matched[,.(VoteCount=.N
+),by=c("Division","PresidentVote")] %>% tidyr::spread(PresidentVote,VoteCount)
+
+
+AllPCs.voteByDivision[is.na(Trump)==TRUE,Trump:=0]
+AllPCs.voteByDivision[is.na(Clinton)==TRUE,Clinton:=0]
+#AllPCs.voteByDivision$TrumpWeaklyInformativeP<-AllPCs.voteByDivision$Trump+VotePropTrump*10
+#AllPCs.voteByDivision$ClintonWeaklyInformativeP<-AllPCs.voteByDivision$Clinton+(1-VotePropTrump)*10
+
+AllPCs.voteByDivision$ProportionTrump<-
+  AllPCs.voteByDivision$Trump/(AllPCs.voteByDivision$Trump+AllPCs.voteByDivision$Clinton)
+
+
+AllPCs.CT.matched.PCMeans.ByDivision<-
+  AllPCs.ClintonTrump.Matched[,.(PC4Mean=mean(PC4),
+                       PC7Mean=mean(PC7),
+                       PC6Mean=mean(PC6),
+                       PC8Mean=mean(PC8)
+  ),by=c("Division")]
+
+PcMeans.voteByDivision<-merge(AllPCs.voteByDivision,AllPCs.CT.matched.PCMeans.ByDivision,by="Division") %>%
+  merge(.,usregions)
+
+PcMeans.voteByDivisionWide<-data.table(tidyr::gather(PcMeans.voteByDivision,PC4Mean,PC7Mean,PC6Mean,PC8Mean,key = "PC",value = "Division Average PC Loading"))
+# this is the easy way to do it. because we're working with a state-by-state map
+# we need to remerge with states in order to show.
+PcMeans.voteByDivisionWide$State<-tolower(PcMeans.voteByDivisionWide$State)
+setnames(PcMeans.voteByDivisionWide,"State","state")
+#setnames(states,"region","state")
+
+# states_data<-data.table(merge(PcMeans.voteByDivisionWide,states,by="state",all.y=TRUE))
+# states_data<-states_data[order(polyorder),]
+
+#Give the Divisions some more relatable names.
+PcMeans.voteByDivisionWide[Division=="West North Central",Division:="Farm Belt States"]
+PcMeans.voteByDivisionWide[Division=="East North Central",Division:="Great Lakes States"]
+PcMeans.voteByDivisionWide[Division=="Mountain",Division:="Mountain States"]
+PcMeans.voteByDivisionWide[Division=="Pacific",Division:="Pacific States"]
+PcMeans.voteByDivisionWide[Division=="West South Central",Division:="South Central States"]
+PcMeans.voteByDivisionWide[Division=="East South Central",Division:="Core Old Dixie"]
+
+data("fifty_states")
+
+
+```
+
+These are the divisions we'll be using:
+
+```{r, echo=FALSE}
+#Let's show the dvision map we're using first....
+ggplot(data=PcMeans.voteByDivisionWide, aes(map_id=state))+
+  geom_map(aes(fill=Division),map=fifty_states)+
+  expand_limits(x=fifty_states$long,y=fifty_states$lat)+
+  coord_map()+scale_x_continuous(breaks=NULL)+scale_y_continuous(breaks=NULL)+
+  ditch_the_axes+usa_theme2+
+  labs(title="States by US Census Division",x="",y="")
+```
+
+
+And this is what voter behavior looks like by division:
+
+```{r}
+ggplot(data=PcMeans.voteByDivisionWide, aes(map_id=state))+
+  geom_map(aes(fill=ProportionTrump),map=fifty_states)+
+  expand_limits(x=fifty_states$long,y=fifty_states$lat)+
+  coord_map()+scale_x_continuous(breaks=NULL)+scale_y_continuous(breaks=NULL)+
+  scale_fill_gradientn(colours=c("blue","red"))+
+  ditch_the_axes+usa_theme2+
+  labs(title="Proportion of Trump vs. Hillary Votes by Division",x="",y="")
+
+```
+
+
+
+```{r, echo=FALSE}
+# ggplot(data=PcMeans.voteByDivisionWide, aes(map_id=state))+
+#   geom_map(aes(fill=`Division Average PC Loading`),map=fifty_states)+
+#   expand_limits(x=fifty_states$long,y=fifty_states$lat)+
+#   coord_map()+scale_x_continuous(breaks=NULL)+scale_y_continuous(breaks=NULL)+
+#   scale_fill_gradientn(colours=c("#005500","#ccffcc"))+
+#   ditch_the_axes+usa_theme2+
+#   labs(title="US Census Division PC Means by Component",x="",y="")+facet_wrap(~PC,nrow=2)
+
+
+#OK. We want to construct these data lists...
+#...with PC to label scores on them, and 
+#will need to add locations as well.
+#or maybe we don't?
+PcMeans.voteByDivisionWide[PC=="PC4Mean",PC:="Economy, climate change"]
+PcMeans.voteByDivisionWide[PC=="PC7Mean",PC:="Work"]
+PcMeans.voteByDivisionWide[PC=="PC6Mean",PC:="Radio"]
+PcMeans.voteByDivisionWide[PC=="PC8Mean",PC:="Web"]
+
+
+dat_text_2<-data.frame(PC=c("Economy, climate change","Work","Radio","Web",
+                            "Economy, climate change","Work","Radio","Web"),
+                       x=c(-130,-130,-130,-130,-90,-90,-90,-90),
+                       pctext=c(paste(get_labs_for_pc("PC4")$CleanText[1:5],collapse="\n"),
+                                paste(get_labs_for_pc("PC7")$CleanText[1:5],collapse="\n"),
+                                paste(get_labs_for_pc("PC6")$CleanText[1:5],collapse="\n"),
+                                paste(get_labs_for_pc("PC8")$CleanText[1:5],collapse="\n"),
+                                paste(get_labs_for_pc("PC4")$CleanText[6:10],collapse="\n"),
+                                paste(get_labs_for_pc("PC7")$CleanText[6:10],collapse="\n"),
+                                paste(get_labs_for_pc("PC6")$CleanText[6:10],collapse="\n"),
+                                paste(get_labs_for_pc("PC8")$CleanText[6:10],collapse="\n")
+                       )
+)
+
+```
+
+
+Here's a few important principal components along with their distributions across the country:
+
+```{r, GraphRegional, fig.height=10,fig.width=10}
+ggplot(data=PcMeans.voteByDivisionWide)+
+  geom_map(aes(fill=`Division Average PC Loading`,map_id=state),map=fifty_states)+
+  expand_limits(x=fifty_states$long,y=fifty_states$lat)+
+  coord_map()+
+  scale_x_continuous(breaks=NULL)+scale_y_continuous(breaks=NULL)+
+  scale_fill_gradientn(colours=c("#cccc00","#cccccc","#cc00cc"))+
+  ditch_the_axes+usa_theme2+
+  labs(title="US Census Division PC Means by Component",x="",y="")+facet_wrap(~PC,nrow=2)+
+  geom_text(data=dat_text_2,
+            mapping=aes(x=x,y=10,label=pctext),
+            hjust=-0.1,vjust=-0.2,
+            size=2,
+            fontface="bold"
+  )
+  
+
+
+```
+
+
+## Discussion
+
+While media consumption (Radio vs. Web) tends to divide the Pacific States and New England with all other states, other issues divide along differnet geographic lines. On the economy and climate change, the Midwest sits squarely on one side, New England in the other, and the South and West sit somewhere in between. On perceptions of work availability, Texas and neighboring states stand apart.
