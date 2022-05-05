@@ -1,16 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>neural-structure on Ben Smith</title>
+    <title>Neural Structure on Ben Smith</title>
     <link>https://bjsmith.github.io/tags/neural-structure/</link>
-    <description>Recent content in neural-structure on Ben Smith</description>
+    <description>Recent content in Neural Structure on Ben Smith</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2022 Ben Smith</copyright>
     <lastBuildDate>Sun, 17 Sep 2017 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://bjsmith.github.io/tags/neural-structure/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="/tags/neural-structure/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>A meta-analytical review of brain activity associated with intertemporal decisions: Evidence for a rostal-caudal tangibility axis</title>
@@ -18,7 +16,14 @@
       <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>https://bjsmith.github.io/project/tangibility-hypothesis/</guid>
-      <description>With evidence from a meta-analysis, I propose a rostral-caudal tangibility axis that helps to create general processes of psychological distance</description>
+      <description>&lt;p&gt;Although almost 200 temporal discounting experiments using functional magnetic resonance imaging are described in the literature, there has not been a meta-analysis synthesizing these results to identify regions differentially activated when subjects choose Smaller-Sooner versus Larger-Later alternatives.&lt;/p&gt;
+
+&lt;p&gt;Evidence suggests a ‘hierarchy of abstraction’ in the prefrontal cortex, from abstract planning and action in more anterior regions to concrete processing in posterior regions, interfacing to other regions of the brain. Because more distant future prospects are represented more abstractly (&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pubmed/25420220&#34; target=&#34;_blank&#34;&gt;Soderberg, Callahan, Kochersberger, Amit, &amp;amp; Ledgerwood, 2015&lt;/a&gt;), we hypothesized that LargerLater choices would be associated with more anterior PFC activation while SmallerSooner choices would be associated with more posterior activation.&lt;/p&gt;
+
+&lt;p&gt;We examined the literature for temporal discounting tasks comparing decisions where subjects chose SmallerSooner vs. LargerLater rewards. Fifteen studies including 471 subjects were tested using SDM neural-meta-analysis software for significant activity throughout the brain across all fifteen studies. We observed LargerLater activity anterior of SmallerSooner activity, both in the left inferior frontal gyrus pars triangularis, which was consistent with our pre-registered hypothesis that LargerLater would be observed anterior of SmallerSooner activity.&lt;/p&gt;
+
+&lt;p&gt;We call for further work investigating links between temporal discounting representation and the processing of abstract and concrete information in the prefrontal cortex, and propose further investigation into implications for a hierarchy of abstraction in a wide variety of decision-making processes based in the prefrontal cortex.&lt;/p&gt;
+</description>
     </item>
     
   </channel>
